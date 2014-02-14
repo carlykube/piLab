@@ -1,0 +1,10 @@
+<?php
+$username = array(
+	"Username",
+	"Nombre de usuario"
+);
+$password = array(
+	"Password",
+	"Contrasena"
+);
+?>
