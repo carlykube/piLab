@@ -25,3 +25,24 @@ sudo apt-get install git-core
 git clone https://github.com/ckubacak/piLab
 ```
 By now, you should be able to see the repository's latest files in the directory you chose and you can begin working! :)
+
+###To set up a test environment on your local machine...
+
+####Mac
+1. Download MAMP from http://www.mamp.info/
+2. ???
+3. Profit!	
+
+####Windows
+1. Download WAMP from http://www.wampserver.com/en/
+2. Place the web site's documents inside c:\wamp\www each time you change them
+3. Run WAMP. The WAMP icon in your taskbar should turn green if everything is working alright!
+4. Access the website in your www folder by typing 127.0.0.1 or localhost in your address bar.
+
+####PHPMyAdmin
+PHPMyAdmin is a helpful tool for performing operations on the MySQL database on your machine.
+
+To access PHPMyAdmin
+```
+127.0.0.1/phpmyadmin
+```
