@@ -16,7 +16,7 @@
 </head>
 <body>
 	
-	<h1>Example Page</h1>
+	<h1><?php $Translator->getText("username"); ?></h1>
 	
 </body>
 </html>
