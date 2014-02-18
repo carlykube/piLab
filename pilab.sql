@@ -1,74 +1,74 @@
-drop database pilab;
-create database pilab;
-use pilab;
+DROP DATABASE pilab;
+CREATE DATABASE pilab;
+USE pilab;
 
-create table users (
-	ID int not null AUTO_INCREMENT, 
-	Name varchar(255) not null, 
-	Gender char not null, 
+CREATE TABLE users (
+	ID int NOT NULL AUTO_INCREMENT, 
+	Name varchar(255) NOT NULL, 
+	Gender char NOT NULL, 
 	Birthday date, 
 	Hometown varchar(255), 
 	Avatar tinyint, 
-	Password varchar(32) not null, 
-	Salt varchar(10) not null, 
-	Suspend BOOL not null default 0, 
-	primary key ( ID )
+	Password varchar(32) NOT NULL, 
+	Salt varchar(10) NOT NULL, 
+	Suspend BOOL NOT NULL default 0, 
+	PRIMARY KEY ( ID )
 );
 
-create table letters (
-	ID int not null AUTO_INCREMENT, 
-	UserFrom int not null, 
-	UserTo int not null, 
-	Text blob not null,  
-	Flagged BOOL not null default 0, 
-	primary key ( ID ), 
-	foreign key ( UserFrom )
-		references users (ID), 
-	foreign key ( UserTo )
-		references users (ID)
+CREATE TABLE letters (
+	ID int NOT NULL AUTO_INCREMENT, 
+	UserFrom int NOT NULL, 
+	UserTo int NOT NULL, 
+	Text blob NOT NULL,  
+	Flagged BOOL NOT NULL default 0, 
+	PRIMARY KEY ( ID ), 
+	FOREIGN KEY ( UserFrom )
+		REFERENCES users (ID), 
+	FOREIGN KEY ( UserTo )
+		REFERENCES users (ID)
 );
 
-create table contacts (
-	ID int not null AUTO_INCREMENT, 	
-	UserOne int not null,
-	UserTwo int not null,
-	foreign key ( UserOne )
-		references users (ID),
-	foreign key ( UserTwo )
-		references users (ID),
-	primary key ( ID )
+CREATE TABLE contacts (
+	ID int NOT NULL AUTO_INCREMENT, 	
+	UserOne int NOT NULL,
+	UserTwo int NOT NULL,
+	FOREIGN KEY ( UserOne )
+		REFERENCES users (ID),
+	FOREIGN KEY ( UserTwo )
+		REFERENCES users (ID),
+	PRIMARY KEY ( ID )
 );
 
-create table authcodes (
-	code VARCHAR(20) not null
+CREATE TABLE authcodes (
+	code VARCHAR(20) NOT NULL
 );
 
-create table roles (
-	ID int not null AUTO_INCREMENT,
-	Name VARCHAR(25) not null,
-	primary key ( ID )
+CREATE TABLE roles (
+	ID int NOT NULL AUTO_INCREMENT,
+	Name VARCHAR(25) NOT NULL,
+	PRIMARY KEY ( ID )
 );
 
-create table permissions (
-	ID int not null AUTO_INCREMENT,
-	Name VARCHAR(50) not null,
-	primary key ( ID )
+CREATE TABLE permissions (
+	ID int NOT NULL AUTO_INCREMENT,
+	Name VARCHAR(50) NOT NULL,
+	PRIMARY KEY ( ID )
 );
 
-create table role_perm (
-	Role int not null,
-	Perm int not null,
-	foreign key ( Role )
-		references roles (ID),
-	foreign key ( Perm )
-		references permissions (ID)
+CREATE TABLE role_perm (
+	Role int NOT NULL,
+	Perm int NOT NULL,
+	FOREIGN KEY ( Role )
+		REFERENCES roles (ID),
+	FOREIGN KEY ( Perm )
+		REFERENCES permissions (ID)
 );
 
-create table user_role (
-	Usr int not null,
-	Role int not null,
-	foreign key ( Usr )
-		references users (ID),
-	foreign key ( Role )
-		references roles (ID)
+CREATE TABLE user_role (
+	Usr int NOT NULL,
+	Role int NOT NULL,
+	FOREIGN KEY ( Usr )
+		REFERENCES users (ID),
+	FOREIGN KEY ( Role )
+		REFERENCES roles (ID)
 );
