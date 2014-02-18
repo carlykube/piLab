@@ -1,4 +1,4 @@
-drop pilab;
+drop database pilab;
 create database pilab;
 use pilab;
 
@@ -29,12 +29,14 @@ create table letters (
 );
 
 create table contacts (
+	ID int not null AUTO_INCREMENT, 	
 	UserOne int not null,
 	UserTwo int not null,
 	foreign key ( UserOne )
 		references users (ID),
 	foreign key ( UserTwo )
-		references users (ID)
+		references users (ID),
+	primary key ( ID )
 );
 
 create table authcodes (
@@ -43,28 +45,30 @@ create table authcodes (
 
 create table roles (
 	ID int not null AUTO_INCREMENT,
-	Name VARCHAR(25) not null
+	Name VARCHAR(25) not null,
+	primary key ( ID )
 );
 
 create table permissions (
 	ID int not null AUTO_INCREMENT,
-	Name VARCHAR(50) not null
+	Name VARCHAR(50) not null,
+	primary key ( ID )
 );
 
 create table role_perm (
 	Role int not null,
 	Perm int not null,
 	foreign key ( Role )
-		references permissions (ID),
+		references roles (ID),
 	foreign key ( Perm )
 		references permissions (ID)
 );
 
 create table user_role (
-	User int not null,
+	Usr int not null,
 	Role int not null,
-	foreign key ( User )
-		references roles (ID),
+	foreign key ( Usr )
+		references users (ID),
 	foreign key ( Role )
 		references roles (ID)
 );
