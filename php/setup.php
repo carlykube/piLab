@@ -6,15 +6,7 @@
 	require('core.php');
 
 	function autoloader($class) {
-<<<<<<< HEAD
 		include_once './php/classes/'.$class.'.class.php';
-=======
-<<<<<<< HEAD
-		include_once 'classes/'.$class.'.class.php';
-=======
-		include_once '/php/classes/'.$class.'.class.php';
->>>>>>> e3ba2e38bf4f3fdad6049af7396eb85d1677d3c2
->>>>>>> b768810f77ec4db9ae0615a96141161bb7fae6e6
 	}
 	spl_autoload_register('autoloader');
 
