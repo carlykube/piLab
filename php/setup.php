@@ -1,6 +1,6 @@
 <?php
 	function autoloader($class) {
-		include_once './classes/'.$class.'.class.php';
+		include_once '/classes/'.$class.'.class.php';
 	}
 	spl_autoload_register('autoloader');
 
