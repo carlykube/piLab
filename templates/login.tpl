@@ -1,8 +1,15 @@
 {include file="header.tpl" title=Login}
 
-<h1>CorreoDigi</h1>
 <form method="POST" action="login.php">
-	{$username}: <input type="text" name="username" required><br/>
-	{$password}: <input type="password" name="password" required><br/>
+	<table>
+		<tr>
+			<td>{$username}: </td>
+			<td><input type="text" name="username" required> </td> </tr>
+		<tr>
+			<td>{$password}: </td>
+			<td><input type="password" name="password" required> </td> </tr>
+	</table>
+	<button>{$submit}</button>
 </form>
+
 {include file="footer.tpl"}
