@@ -1,8 +1,8 @@
 {include file="header.tpl" title=Login}
 
-<h1>Login page</h1>
-
-<p>{$username}</p>
-<p>{$password}</p>
-
+<h1>CorreoDigi</h1>
+<form>
+	{$username}: <input type="text" name="username"><br/>
+	<button>{$submit}</button>
+</form>
 {include file="footer.tpl"}

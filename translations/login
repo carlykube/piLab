@@ -7,4 +7,8 @@ $password = array(
 	"Password",
 	"Contrasena"
 );
+$submit = array(
+	"Submit",
+	"Enviar"
+);
 ?>
