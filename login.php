@@ -1,22 +1,10 @@
-<?php require "php/setup.php"; ?>
+<?php
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	
-	<!-- Page data -->
-	<meta charset="utf-8">
-	<meta name="description" content="">
-	<link rel="shortcut icon" href="">
-	<title></title>
-	
-	<!-- CSS Links -->
-	<link href="css/main.css" rel="stylesheet">
-	
-</head>
-<body>
-	
-	<h1><?php $Translator->getText("username"); ?></h1>
-	
-</body>
-</html>
+require "php/setup.php";
+
+$smarty->assign("username", $Translator->getText("username"));
+$smarty->assign("password", $Translator->getText("password"));
+
+$smarty->display('login.tpl');
+
+?>
