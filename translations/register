@@ -1,0 +1,38 @@
+<?php
+$firstname = array(
+	"First Name",
+	"Nombre"
+);
+$lastname = array(
+	"Last Name",
+	"Apellido"
+);
+$username = array(
+	"Username",
+	"Nombre de usuario"
+);
+$password = array(
+	"Password",
+	"Contrasena"
+);
+$gender = array(
+	"Gender",
+	"Género"
+);
+$birthday = array(
+	"Date of Birth",
+	"Fecha de nacimiento"
+);
+$hometown = array(
+	"Hometown",
+	"Ciudad Natal"
+);
+$avatar = array(
+	"Avatar",
+	"Avatar"
+);
+$submit = array(
+	"Submit",
+	"Enviar"
+);
+?>
