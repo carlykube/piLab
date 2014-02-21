@@ -14,3 +14,5 @@
 </head>
 <body>
 	{include file="navbar.tpl"}
+	
+	<h1> CorreoDigi</h1>
