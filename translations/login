@@ -5,7 +5,7 @@ $username = array(
 );
 $password = array(
 	"Password",
-	"Contrasena"
+	"Contraseña"
 );
 $submit = array(
 	"Submit",

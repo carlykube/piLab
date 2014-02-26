@@ -9,10 +9,11 @@
 	<title>{$title}</title>
 
 	<!-- CSS Links -->
+	<link href="css/reset.css" rel="stylesheet">
 	<link href="css/main.css" rel="stylesheet">
 
 </head>
 <body>
 	{include file="navbar.tpl"}
 	
-	<h1> CorreoDigi</h1>
+	<h1> CorreoDigi </h1>

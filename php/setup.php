@@ -18,7 +18,6 @@
 		$lang = $_COOKIE['lang'];
 	}
 
-
 	$MySQL = new MySQL();
 
 	//Account stuff...

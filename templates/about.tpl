@@ -1,4 +1,4 @@
-{include file="header.tpl" title=Home}
+{include file="header.tpl" title=About}
 
 <h2> About CorreoDigi </h2>
 

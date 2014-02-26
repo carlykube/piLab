@@ -13,7 +13,7 @@ $username = array(
 );
 $password = array(
 	"Password",
-	"Contrasena"
+	"Contraseña"
 );
 $gender = array(
 	"Gender",
