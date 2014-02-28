@@ -1,0 +1,36 @@
+/* Styles for the menu bar */
+#navbar {
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	border-bottom: 2px solid #ccc;
+	background: #909090;
+}
+
+#logoImg {
+	float:left;
+	width: 75px;
+	height: 35px;
+}
+
+#navbar a {
+	margin:0;
+	padding: 0.3em;
+	float:left;
+	background: #8F3C1C;
+	border: 1px solid #8F3C1C;
+	text-decoration:none;
+	color: white;
+	font-size: 20px;
+	height: 20px;
+}
+
+#navbar a:hover {
+	background-color: #C8C8C8 
+}
+
+/* Moves the top of the view to below the nav bar */
+#navSpace {
+	padding-bottom:50px;
+}

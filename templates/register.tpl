@@ -17,7 +17,7 @@
 			 	<input type="radio" class="usernameRadio" name="username" value="username4"> </td> </tr>
 		<tr>
 			<td>{$password}: </td>
-			<td> <input type="text" name="password"> </td> </tr>
+			<td> <input type="password" name="password"> </td> </tr>
 		<tr>
 			<td> {$gender}: </td>
 			<td> <input type="radio" name="gender" value="male"> Male
