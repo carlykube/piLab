@@ -5,16 +5,16 @@
 		<table>
 		<tr>
 			<td> {$firstname}: </td>
-			<td> <input type="text" name="firstname"> </td> </tr>
+			<td> <input type="text" id="firstname" name="firstname"> </td> </tr>
 		<tr>
 			<td> {$lastname}: </td>
-			<td> <input type="text" name="lastname"> </td> </tr>
+			<td> <input type="text" id="lastname" name="lastname"> </td> </tr>
 		<tr>
 			<td> {$username}: </td>
-			<td> <input type="radio" name="username" value="username1"><br/>
-				 <input type="radio" name="username" value="username2"><br/>
-				 <input type="radio" name="username" value="username3"><br/>
-				 <input type="radio" name="username" value="username4"> </td> </tr>
+			<td> 	<input type="radio" class="usernameRadio" name="username" value="username1"><br/>
+			 	<input type="radio" class="usernameRadio" name="username" value="username2"><br/>
+			 	<input type="radio" class="usernameRadio" name="username" value="username3"><br/>
+			 	<input type="radio" class="usernameRadio" name="username" value="username4"> </td> </tr>
 		<tr>
 			<td>{$password}: </td>
 			<td> <input type="text" name="password"> </td> </tr>
@@ -33,3 +33,29 @@
 </form>
 
 {include file="footer.tpl"}
+
+<script>
+	$(function() {
+		updateUsernames();
+	});
+
+	$('#firstname').keyup(function(event){
+		updateUsernames(event);
+	});
+	$('#lastname').keyup(function(event){
+		updateUsernames(event);
+	});
+	
+	function updateUsernames(event) {
+		if($('#firstname').val() == '' && $('#lastname').val() == '') {
+			$('.usernameRadio').hide();
+		} else {
+			var usernames = generateUsernames();
+			$('.usernameRadio').show();
+		}
+	}
+
+	function generateUsernames() {
+		return ["username1","username2","username3","ue
+	}
+</script>
