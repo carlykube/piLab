@@ -1,3 +1,14 @@
 <?php
-
+$paragraph1 = array(
+	"The EWB-SMU piLab team is working to set up a raspberry-pi-powered computer lab in an Orphanage in Honduras. Our goal in creating the piLab is to open up communication between the children in Honduras and the people who visit the orphanage and then return to the United States. Through the piLab project, we aim to create an efficient and customizable method of establishing pi-powered computer labs in undeveloped parts of the world.",
+	"El equipo piLab EWB-SMU está trabajando para establecer un laboratorio de computación de frambuesa-pi-accionado en un orfanato en Honduras. Nuestro objetivo al crear el piLab es abrir la comunicación entre los niños en Honduras y la gente que visita el orfanato y luego regresan a los Estados Unidos. A través del proyecto piLab, nuestro objetivo es crear un método eficiente y personalizable de establecer laboratorios de computación pi-powered en partes subdesarrolladas del mundo."
+	);
+$paragraph2 = array(
+	"To address the communication problem in the orphanage in Honduras, the piLab team will develop a custom, web-based application that the children in Honduras can use to communicate with their friends in the United States. The application will simulate traditional, letter-writing correspondence. To ensure that all parties can understand the application, we will design simple user interfaces in both English and Spanish.",
+	"Para abordar el problema de comunicación en el orfanato en Honduras, el equipo piLab desarrollará una aplicación basada en web a medida que los niños de Honduras pueden utilizar para comunicarse con sus amigos en los Estados Unidos. La aplicación simulará tradicional, la correspondencia epistolar. Para garantizar que todas las partes puedan entender la aplicación, vamos a diseñar interfaces de usuario sencillas, tanto en Inglés y Español."
+	);
+$paragraph3 = array(
+	"Once development of CorreoDigi is completed, the EWB-SMU piLab team will travel to Honduras and set up the piLab. During this time, we will teach the children how to use the application and gather information about how to improve CorreoDigiand what other software applications might be of interest to the children in the orphanage. We currently have plans to create gardening software as well as expanding CorreoDigi to include mentorship components.",
+	"Una vez que el desarrollo de CorreoDigi se completa, el equipo de EWB-SMU piLab viajará a Honduras y configurar el piLab. Durante este tiempo, vamos a enseñar a los niños cómo utilizar la aplicación y obtener información acerca de cómo mejorar CorreoDigiand lo que otras aplicaciones de software podrían ser de interés para los niños en el orfanato. Actualmente contamos con planes para crear software de jardinería, así como la ampliación de CorreoDigi para incluir componentes de tutoría."
+	);
 ?>
