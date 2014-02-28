@@ -3,7 +3,7 @@ class MySQL {
 
 	private $host = "127.0.0.1";
 	private $user = "root";
-	private $password = "root"; 
+	private $password = "ewbSMU"; 
 	private $dbname = "pilab";
 	private $c;
 	
