@@ -14,7 +14,7 @@ class MySQL {
 		}
 		catch(PDOException $e)
 		{
-			die("You could not connect to the SQL database: ".e);
+			die("You could not connect to the SQL database: ".$e->getMessage());
 		}
 	}	
 
