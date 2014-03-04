@@ -48,7 +48,7 @@
 	function updateUsernames() {
 		if($('#firstname').val() == '' || $('#lastname').val() == '') {
 			$('.usernameRadio').remove();
-			$('#usernameList').html("Please enter your first and last names before picking a username");
+			$('#usernameList').html("{$firstlastuser}");
 		} else {
 			$('.usernameRadio').remove();
 			$('#usernameList').html('');
