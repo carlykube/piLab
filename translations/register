@@ -35,4 +35,8 @@ $submit = array(
 	"Submit",
 	"Enviar"
 );
+$firstlastuser = array(
+	"Please enter your first and last names before picking a username",
+	"Por favor, entra su nombre y appellidos antes de escoger un nombre de usuario"
+);
 ?>

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+	error_reporting(E_ERROR | E_PARSE | E_NOTICE);
 
 	require('core.php');
 
@@ -21,7 +21,8 @@
 	$MySQL = new MySQL();
 
 	//Account stuff...
-	$user = new Account();
+	if(isset($_SESSION['user'])) $user = unserialize($_SESSION['user']);
+	else $user = new Account();
 
 	include_once "./translations/".basename($_SERVER['SCRIPT_NAME'],'.php');
 	$Translator = new Translator($lang); //'en' for English; 'es' for Spanish

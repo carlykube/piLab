@@ -1,9 +1,9 @@
 <?php
 class MySQL {
 
-	private $host = "localhost";
+	private $host = "127.0.0.1";
 	private $user = "root";
-	private $password = "root"; 
+	private $password = "ewbSMU"; 
 	private $dbname = "pilab";
 	private $c;
 	
@@ -14,7 +14,7 @@ class MySQL {
 		}
 		catch(PDOException $e)
 		{
-			die("You could not connect to the SQL database: ".$e->getMessage());
+			die("You could not connect to the SQL database: ".e);
 		}
 	}	
 
@@ -28,7 +28,7 @@ class MySQL {
 		}
 		catch(PDOException $e)
 		{
-			die("Your query sucked");
+			die("Your query sucked".e);
 		}
 
 	}
