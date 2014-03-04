@@ -3,7 +3,7 @@ class MySQL {
 
 	private $host = "127.0.0.1";
 	private $user = "root";
-	private $password = "ewbSMU"; 
+	private $password = "root"; 
 	private $dbname = "pilab";
 	private $c;
 	
@@ -28,7 +28,7 @@ class MySQL {
 		}
 		catch(PDOException $e)
 		{
-			die("Your query sucked".e);
+			die("Your query sucked");
 		}
 
 	}
