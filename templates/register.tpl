@@ -22,26 +22,26 @@ $(function() {
 	updateUsernames();
 });
 
-	$('#firstname').keyup(function(event){
-		updateUsernames();
-	});
-	$('#lastname').keyup(function(event){
-		updateUsernames();
-	});
-	
-	function updateUsernames() {
-		if($('#firstname').val() == '' || $('#lastname').val() == '') {
-			$('.usernameRadio').remove();
-			$('#usernameList').html("{$firstlastuser}");
-		} else {
-			$('.usernameRadio').remove();
-			$('#usernameList').html('');
-			var usernames = generateUsernames();
-			$.each(usernames,function(index,value) {
-				$('#usernameList').append("<div class='usernameRadio'><input type='radio' name='username' value='"+value+"'>"+value+"</div>");
-			});
-		}
+$('#firstname').keyup(function(event){
+	updateUsernames();
+});
+$('#lastname').keyup(function(event){
+	updateUsernames();
+});
+
+function updateUsernames() {
+	if($('#firstname').val() == '' || $('#lastname').val() == '') {
+		$('.usernameRadio').remove();
+		$('#usernameList').html("{$firstlastuser}");
+	} else {
+		$('.usernameRadio').remove();
+		$('#usernameList').html('');
+		var usernames = generateUsernames();
+		$.each(usernames,function(index,value) {
+			$('#usernameList').append("<div class='usernameRadio'><input type='radio' name='username' value='"+value+"'>"+value+"</div>");
+		});
 	}
+}
 
 function generateUsernames() {
 	var usernames = new Array();
