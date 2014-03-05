@@ -9,7 +9,7 @@
 	<title>{$title}</title>
 
 	<!-- CSS Links -->
-	<link href="css/reset.css" rel="stylesheet">
+
 	<link href="css/main.css" rel="stylesheet">
 
 </head>

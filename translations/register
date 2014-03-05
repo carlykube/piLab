@@ -1,46 +1,45 @@
 <?php
-$firstname = array(
-	"First Name",
-	"Nombre"
-);
-$lastname = array(
-	"Last Name",
-	"Apellido"
-);
-$username = array(
-	"Username",
-	"Nombre de usuario"
-);
-$password = array(
-	"Password",
-	"Contraseña"
-);
-$confirmpassword = array(
-	"Confirm password",
-	"Confirmar contraseña"
-);
-$gender = array(
-	"Gender",
-	"Género"
-);
-$birthday = array(
-	"Date of Birth",
-	"Fecha de nacimiento"
-);
-$hometown = array(
-	"Hometown",
-	"Ciudad Natal"
-);
-$avatar = array(
-	"Avatar",
-	"Avatar"
-);
-$submit = array(
-	"Submit",
-	"Enviar"
-);
-$firstlastuser = array(
-	"Please enter your first and last names before picking a username",
-	"Por favor, entra su nombre y appellidos antes de escoger un nombre de usuario"
+
+$translations = array(
+	'firstname' => array(
+		"First Name",
+		"Nombre"
+	),
+	'lastname' => array(
+		"Last Name",
+		"Apellido"
+	),
+	'username' => array(
+		"Username",
+		"Nombre de usuario"
+	),
+	'password' => array(
+		"Password",
+		"Contraseña"
+	),
+	'gender' => array(
+		"Gender",
+		"Género"
+	),
+	'birthday' => array(
+		"Date of Birth",
+		"Fecha de nacimiento"
+	),
+	'hometown' => array(
+		"Hometown",
+		"Ciudad Natal"
+	),
+	'avatar' => array(
+		"Avatar",
+		"Avatar"
+	),
+	'submit' => array(
+		"Submit",
+		"Enviar"
+	),
+	'firstlastuser' => array(
+		"Please enter your first and last names before picking a username",
+		"Por favor, entra su nombre y appellidos antes de escoger un nombre de usuario"
+	)
 );
 ?>
