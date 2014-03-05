@@ -14,6 +14,9 @@
 	if(isset($_GET['lang'])) {
 		setcookie("lang",$_GET['lang'],time()+(2*365*24*60*60)); // Language cookie expires in 2 years
 		$lang = $_GET['lang'];
+	} elseif (!isset($_COOKIE['lang'])) {
+		$_COOKIE['lang'] = "en";
+		$lang = $_COOKIE['lang'];
 	} else {
 		$lang = $_COOKIE['lang'];
 	}
