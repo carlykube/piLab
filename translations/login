@@ -1,14 +1,17 @@
 <?php
-$username = array(
+$translations = array(
+
+'username' => array(
 	"Username",
 	"Nombre de usuario"
-);
-$password = array(
+),
+'password' => array(
 	"Password",
 	"Contraseña"
-);
-$submit = array(
+),
+'submit' => array(
 	"Submit",
 	"Enviar"
+)
 );
 ?>
