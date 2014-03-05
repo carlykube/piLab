@@ -73,6 +73,10 @@
 		header("Location: index.php");
 		die("Redirecting to index.php");
 		}
+		function logout(){
+			unset($_SESSION['user']);
+			
+		}
 
 	}
 ?>

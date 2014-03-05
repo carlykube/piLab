@@ -5,6 +5,7 @@ USE pilab;
 CREATE TABLE users (
 	ID int NOT NULL AUTO_INCREMENT, 
 	Name varchar(255) NOT NULL, 
+	Username varchar(50) NOT NULL,
 	Gender char NOT NULL, 
 	Birthday date, 
 	Hometown varchar(255), 
@@ -72,3 +73,4 @@ CREATE TABLE user_role (
 	FOREIGN KEY ( Role )
 		REFERENCES roles (ID)
 );
+GRANT ALL ON pilab.* to pilab@localhost identified by 'ewbSMU'; 
