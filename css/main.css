@@ -51,3 +51,16 @@ nav a:hover {
 	bottom: 10px;
 	right: 10px;
 }
+
+/* ~~~~~ Registration types ~~~~~~~~~~~ */
+#registrationtypes {
+	margin: 0 auto;
+	width:70%;
+	text-align:center;
+}
+
+#registrationtypes div {
+	width:33%;
+	float:left;
+}
+
