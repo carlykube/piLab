@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-	<div id="navbar">
-		<a href="index.php">Home</a>
-		<a href="about.php">About</a>
-		<a href="login.php">Login</a>
-		<a href="register.php">Register</a>
-		<a href="create.php">Create</a>
-	</div>
-=======
 <nav id="navbar">
 	<ul>
 		<li><img id="logoImg" src="img/logo_holder.png" alt="Logo" title="Logo"></li>
@@ -25,4 +16,4 @@
 
 <!-- Moves the top of the view to below the nav bar -->
 <div id="navSpace"></div>
->>>>>>> FETCH_HEAD
+
