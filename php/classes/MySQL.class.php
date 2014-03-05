@@ -25,13 +25,13 @@ class MySQL {
 	{
 		try
 		{
-			$statement = $this->c->prepare(method);
+			$statement = $this->c->prepare($query);
 			$result = $statement->execute($params);
-			return $result->fetchAll();
+			return $result;
 		}
 		catch(PDOException $e)
 		{
-			die("Your query sucked");
+			die("Your query sucked".$e->getMessage());
 		}
 
 	}

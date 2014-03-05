@@ -69,7 +69,7 @@
 				':password' => $password,
 				':salt' => $salt
 				);
-			$result = $GLOBALS['MySQL']->query($query,$params);
+		$result = $GLOBALS['MySQL']->query($query,$params);
 		header("Location: index.php");
 		die("Redirecting to index.php");
 		}

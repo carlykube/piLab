@@ -27,9 +27,23 @@
 	if(isset($_SESSION['user'])) $user = unserialize($_SESSION['user']);
 	else $user = new Account();
 
+
+
 	include_once "./translations/".basename($_SERVER['SCRIPT_NAME'],'.php');
 	$Translator = new Translator($lang); //'en' for English; 'es' for Spanish
+	// ~~~~ End setup
+	if(isset($_POST['form'])){
+		$form = $_POST['form'];
+		if($form=='login')
+			$user->login();
+		else if($form == 'register')
+			$user->register();
+		else if($form == 'logout')
+			$user->logout();
+	}
 
-	require "./libs/Smarty.class.php";
-	$smarty = new Smarty;
+
+	//Render the page
+		require "./libs/Smarty.class.php";
+		$smarty = new Smarty;
 ?>

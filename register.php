@@ -2,6 +2,7 @@
 
 require "php/setup.php";
 
+ 
 if(isset($_GET['registrationtype'])) {
 	$smarty->assign("registrationtype",$_GET['registrationtype']);
 	
@@ -14,6 +15,8 @@ if(isset($_GET['registrationtype'])) {
 	$smarty->assign("hometown", $Translator->getText("hometown"));
 	$smarty->assign("submit", $Translator->getText("submit"));
 	$smarty->assign("firstlastuser", $Translator->getText("firstlastuser"));
+	$smarty->assign("confirmpassword", $Translator->getText("confirmpassword"));
+
 
 	$smarty->display('register.tpl');
 } else {
