@@ -2,15 +2,21 @@
 
 <h2>Register</h2>
 <form class="userForm" method="POST" action="register.php" autocomplete="off">
+	<label for="firstname">{$firstname}: </label>
 	<input type="text" name="firstname" id="firstname" placeholder={$firstname}><br>
+	<label for="lastname">{$lastname}: </label>
 	<input type="text" name="lastname" id="lastname" placeholder={$lastname}><br>
 	{$username}:<div id="usernameList"></div>
+	<label for="password">{$password}: </label>
 	<input type="password" name="password" placeholder={$password}><br>
+	<label for="confirmpassword">{$confirmpassword}: </label>
 	<input type="password" name="password" placeholder={$password}><br>
 	<label for="gender">{$gender}: </label>
 	<input type="radio" name="gender" value="male"> Male
 	<input type="radio" name="gender" value="female"> Female <br>
+	<label for="birthday">{$birthday}: </label>
 	<input type="text" name="birthday" maxlength="10" placeholder={$birthday}><br>
+	<label for="hometown">{$hometown}: </label>
 	<input type="text" name="hometown" placeholder={$hometown}><br>
 	<button>{$submit}</button>
 </form>
