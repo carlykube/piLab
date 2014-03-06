@@ -14,8 +14,8 @@
 	<label for="confirmpassword">{$confirmpassword}: </label>
 		<input type="password" name="password" placeholder="{$password}"><br>
 	<label for="gender">{$gender}: </label>
-		<input type="radio" name="gender" value="male"> Male
-		<input type="radio" name="gender" value="female"> Female <br>
+		<input type="radio" name="gender" value="m"> Male
+		<input type="radio" name="gender" value="f"> Female <br>
 	<label for="birthday">{$birthday}: </label>
 
 	<input type="text" name="bday" maxlength="10" placeholder={$birthday}><br>

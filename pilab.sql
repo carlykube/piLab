@@ -1,4 +1,3 @@
-DROP DATABASE pilab;
 CREATE DATABASE pilab;
 USE pilab;
 
@@ -10,8 +9,8 @@ CREATE TABLE users (
 	Birthday date, 
 	Hometown varchar(255), 
 	Avatar tinyint, 
-	Password varchar(32) NOT NULL, 
-	Salt varchar(10) NOT NULL, 
+	Password varchar(64) NOT NULL, 
+	Salt varchar(16) NOT NULL, 
 	Suspend BOOL NOT NULL default 0, 
 	PRIMARY KEY ( ID )
 );
