@@ -54,13 +54,27 @@ nav a:hover {
 
 /* ~~~~~ Registration types ~~~~~~~~~~~ */
 #registrationtypes {
-	margin: 0 auto;
-	width:70%;
-	text-align:center;
+	width:80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #registrationtypes div {
-	width:33%;
 	float:left;
+	text-align:center;
+	width:30%;
+}
+
+#registrationtypes div img {
+	width:80%;
+	display:inline;
+}
+
+#registrationtypes div:hover {
+	background-color: #C8C8C8; 
+}
+
+#registrationtypes .spaceRight {
+	margin-right:2%;
 }
 
