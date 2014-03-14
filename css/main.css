@@ -3,11 +3,15 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 /* ~~~~~~~~~~~~~~~~ End resets ~~~~~~~~~~~~~~~~~ */
 
 
+html {
+	background-image: url("../img/tree_bg.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
 
 body {
 	line-height:125%;
 	font-family: Arial,sans-serif;
-
 }
 
 nav {
@@ -63,6 +67,7 @@ nav a:hover {
 	float:left;
 	text-align:center;
 	width:30%;
+	background-color: #6B70CC;
 }
 
 #registrationtypes div img {
@@ -71,10 +76,14 @@ nav a:hover {
 }
 
 #registrationtypes div:hover {
-	background-color: #C8C8C8; 
+	background-color: rgba(107,112,204,0.7);
 }
 
 #registrationtypes .spaceRight {
 	margin-right:2%;
 }
 
+.roundedBackgroundBox {
+	border-radius: 2em;
+	margin-top: 2em;
+}
