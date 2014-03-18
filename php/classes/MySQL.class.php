@@ -27,7 +27,8 @@ class MySQL {
 		{
 			$statement = $this->c->prepare($query);
 			$result = $statement->execute($params);
-			return $result;
+			//var_dump($statement->fetchAll());
+			return $statement;
 		}
 		catch(PDOException $e)
 		{
