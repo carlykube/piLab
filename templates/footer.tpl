@@ -1,7 +1,7 @@
 <div id="languageSelector">
-	<a href="?lang=en">English</a>
-	<a href="?lang=es">Español</a>
+	{$languageLinks}
 </div>
 <script src="./js/zepto.min.js"></script>
+<script src="./js/footer.js"></script>
 </body>
 </html>

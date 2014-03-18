@@ -46,4 +46,18 @@
 	//Render the page
 		require "./libs/Smarty.class.php";
 		$smarty = new Smarty;
+
+
+	if (isset($_GET['lang'])) {
+		if ($_GET['lang']=='es') {
+			$smarty->assign('languageLinks', '<a href="?lang=en">English</a>');
+		} elseif ($_GET['lang']=='en') {
+			$smarty->assign('languageLinks', '<a href="?lang=es">Español</a>');
+		} else {
+			$smarty->assign('languageLinks', '<a href="?lang=en">English</a><a href="?lang=es">Español</a>');
+		}
+	}
+
+
+
 ?>
