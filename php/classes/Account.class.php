@@ -10,18 +10,18 @@
 
 		function login() {
 			$username = $_POST['username'];
-			
 			//Check to see if username exists...
 			$query = "SELECT * FROM users WHERE Username = :username;";
 			$params = array(
 				':username' => $username
 			);
-			$result = $GLOBALS['MySQL']->query($query,$params);
+			$result = $GLOBALS['MySQL']->query($query,$params)->fetch();
+			
 			if($result) { // username exists
 				$password = $_POST['password'];
 				
 				//Use the salt in the username's row to rehash the password
-				$salt = $result[0]->Salt;
+				$salt = $result['Salt'];
 				$password = hash('sha256', $_POST['password'] . $salt);
 				for($round = 0; $round < 65536; $round++)
 				{
@@ -29,19 +29,21 @@
 				}
 				
 				//Check hashed password against hashed password in DB
-				if($password == $result[0]->Password) { //Success!
-					$this->userid = $result[0]->ID;
-					$this->name = $result[0]->name;
-					$this->gender = $result[0]->Gender;
-					$this->bday = $result[0]->Birthday;
-					$this->htown = $result[0]->Hometown;
-					$this->avatar = $result[0]->Avatar;
-					$this->username = $result[0]->Username;
+				if($password == $result['Password']) { //Success!
+					$this->userid = $result['ID'];
+					$this->name = $result['Name'];
+					$this->gender = $result['Gender'];
+					$this->bday = $result['Birthday'];
+					$this->htown = $result['Hometown'];
+					$this->avatar = $result['Avatar'];
+					$this->username = $result['Username'];
 					$this->logged = true;
 					$_SESSION['user'] = serialize($this);
+					header("Location: index.php");
+					die("Redirecting to index.php");
 				}
 			} else { //Wrong username
-				die("Invalid username!");
+				echo "Invalid username!";
 			}
 		}
 
@@ -73,9 +75,9 @@
 		header("Location: index.php");
 		die("Redirecting to index.php");
 		}
+		
 		function logout(){
 			unset($_SESSION['user']);
-			
 		}
 
 	}
