@@ -20,7 +20,9 @@ CREATE TABLE letters (
 	UserFrom int NOT NULL, 
 	UserTo int NOT NULL, 
 	Text blob NOT NULL,  
-	Flagged BOOL NOT NULL default 0, 
+	Flagged BOOL default 0,
+	LetterRead BOOL default 0,
+	DateSent DATE,
 	PRIMARY KEY ( ID ), 
 	FOREIGN KEY ( UserFrom )
 		REFERENCES users (ID), 
@@ -73,3 +75,4 @@ CREATE TABLE user_role (
 		REFERENCES roles (ID)
 );
 GRANT ALL ON pilab.* to pilab@localhost identified by 'ewbSMU'; 
+insert into letters(UserFrom, UserTo, Text, ) values();

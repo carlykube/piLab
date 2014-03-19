@@ -31,10 +31,11 @@
 
 	include_once "./translations/".basename($_SERVER['SCRIPT_NAME'],'.php');
 	$Translator = new Translator($lang); //'en' for English; 'es' for Spanish
+	
 	// ~~~~ End setup
 	if(isset($_POST['form'])){
 		$form = $_POST['form'];
-		if($form=='login')
+		if($form =='login')
 			$user->login();
 		else if($form == 'register')
 			$user->register();
@@ -46,4 +47,18 @@
 	//Render the page
 		require "./libs/Smarty.class.php";
 		$smarty = new Smarty;
+
+
+	if (isset($_GET['lang'])) {
+		if ($_GET['lang'] =='es') {
+			$smarty->assign('languageLinks', '<a href="?lang=en">English</a>');
+		} else if ($_GET['lang']=='en') {
+			$smarty->assign('languageLinks', '<a href="?lang=es">Español</a>');
+		} 
+	} else {
+		$smarty->assign('languageLinks', '<a href="?lang=en">English</a><a href="?lang=es">Español</a>');
+	}
+
+
+
 ?>

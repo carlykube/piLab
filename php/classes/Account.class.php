@@ -45,6 +45,18 @@
 			} else { //Wrong username
 				echo "Invalid username!";
 			}
+			/**** Reverse commented code inside this function (login) to play with home page ********
+					$this->userid = 2;
+					$this->name = "Carly Kubacak";
+					//$this->gender = $result[0]->Gender;
+					//$this->bday = $result[0]->Birthday;
+					//$this->htown = $result[0]->Hometown;
+					//$this->avatar = $result[0]->Avatar;
+					//$this->username = $result[0]->Username;
+					$this->logged = true;
+					$_SESSION['user'] = serialize($this);
+					header("Location: home.php");
+			*******************************************************************************************/
 		}
 
 		function register() {
@@ -72,12 +84,27 @@
 				':salt' => $salt
 				);
 		$result = $GLOBALS['MySQL']->query($query,$params);
-		header("Location: index.php");
+		header("Location: login.php");
 		die("Redirecting to index.php");
 		}
 		
+		
 		function logout(){
 			unset($_SESSION['user']);
+		}
+
+
+		function getUnreadLetters(){			
+			$query = "SELECT * FROM letters WHERE UserTo = :userid AND LetterRead IS FALSE;";
+			$params = array(
+				':userid' => $this->userid
+			);
+			$result = $GLOBALS['MySQL']->query($query,$params);
+			return $result->fetchAll();
+		}
+
+		function getName(){
+			return $this->name;
 		}
 
 	}
