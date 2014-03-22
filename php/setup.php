@@ -31,10 +31,11 @@
 
 	include_once "./translations/".basename($_SERVER['SCRIPT_NAME'],'.php');
 	$Translator = new Translator($lang); //'en' for English; 'es' for Spanish
+	
 	// ~~~~ End setup
 	if(isset($_POST['form'])){
 		$form = $_POST['form'];
-		if($form=='login')
+		if($form =='login')
 			$user->login();
 		else if($form == 'register')
 			$user->register();
@@ -49,9 +50,9 @@
 
 
 	if (isset($_GET['lang'])) {
-		if ($_GET['lang']=='es') {
+		if ($_GET['lang'] =='es') {
 			$smarty->assign('languageLinks', '<a href="?lang=en">English</a>');
-		} elseif ($_GET['lang']=='en') {
+		} else if ($_GET['lang']=='en') {
 			$smarty->assign('languageLinks', '<a href="?lang=es">Español</a>');
 		} else {
 			$smarty->assign('languageLinks', '<a href="?lang=en">English</a><a href="?lang=es">Español</a>');

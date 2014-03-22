@@ -4,8 +4,8 @@ class MySQL {
 	private $host = "localhost";
 
 	
-	private $user = "pilab";
-	private $password = "ewbSMU"; 
+	private $user = "root";
+	private $password = "root"; 
    
 	private $dbname = "pilab";
 	private $c;
@@ -26,8 +26,8 @@ class MySQL {
 		try
 		{
 			$statement = $this->c->prepare($query);
-			$result = $statement->execute($params);
-			return $result;
+			$statement->execute($params);
+			return $statement;
 		}
 		catch(PDOException $e)
 		{

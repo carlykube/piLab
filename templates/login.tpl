@@ -6,6 +6,7 @@
 	<input type="text" name="username" id="username" placeholder={$username} required><br>
 	<label for="password">{$password}: </label>
 	<input type="password" name="password" id="password" placeholder={$password} required><br>
+	<input type="hidden" name="form" value="login">
 	<button>{$submit}</button>
 </form>
 
