@@ -11,6 +11,10 @@ $translations = array(
 'paragraph3' => array(
 	"Once development of CorreoDigi is completed, the EWB-SMU piLab team will travel to Honduras and set up the piLab. During this time, we will teach the children how to use the application and gather information about how to improve CorreoDigiand what other software applications might be of interest to the children in the orphanage. We currently have plans to create gardening software as well as expanding CorreoDigi to include mentorship components.",
 	"Una vez que el desarrollo de CorreoDigi se completa, el equipo de EWB-SMU piLab viajará a Honduras y configurar el piLab. Durante este tiempo, vamos a enseñar a los niños cómo utilizar la aplicación y obtener información acerca de cómo mejorar CorreoDigiand lo que otras aplicaciones de software podrían ser de interés para los niños en el orfanato. Actualmente contamos con planes para crear software de jardinería, así como la ampliación de CorreoDigi para incluir componentes de tutoría."
+	),
+	'aboutcd' => array(
+		"About CorreoDigi",
+		"Acerca de CorreoDigi"
 	)
 	);
 ?>

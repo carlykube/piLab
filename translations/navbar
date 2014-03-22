@@ -1,0 +1,27 @@
+<?php
+
+//ranslations = array(
+$GLOBALS['translations'] = array_merge ($GLOBALS['translations'], array(
+	'navbarhome' => array(
+		"Home",
+		"Página de Inicio"
+	),
+
+	'navbarabout' => array(
+		"About",
+		"Sobre"
+	),
+
+	'navbarlogin' => array(
+		"Login",
+		"Login"
+	),
+
+	'navbarregister' => array(
+		"Register",
+		"Registrar"
+	)
+)
+
+);
+?>

@@ -7,6 +7,7 @@
 			} elseif($language == "es") {
 				$this->language = 1;
 			}
+			include_once "./translations/navbar";
 		}
 		
 		function getText($textName) {

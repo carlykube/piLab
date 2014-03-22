@@ -56,6 +56,16 @@
 		} else {
 			$smarty->assign('languageLinks', '<a href="?lang=en">English</a><a href="?lang=es">Español</a>');
 		}
+	} else {
+		if(isset($_SESSION['lang'])){
+			if ($_SESSION['lang']=='es') {
+				$smarty->assign('languageLinks', '<a href="?lang=en">English</a>');
+			} elseif ($_SESSION['lang']=='en') {
+				$smarty->assign('languageLinks', '<a href="?lang=es">Español</a>');
+			}
+		} else {
+			$smarty->assign('languageLinks', '<a href="?lang=en">English</a><a href="?lang=es">Español</a>');
+		}
 	}
 
 

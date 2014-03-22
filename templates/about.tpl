@@ -1,6 +1,6 @@
 {include file="header.tpl" title=About}
 
-<h2> About CorreoDigi </h2>
+<h2>{$aboutcd}</h2>
 
 <div>
 	<p>{$paragraph1}</p>

@@ -1,17 +1,22 @@
 <?php
 $translations = array(
 
-'username' => array(
-	"Username",
-	"Nombre de usuario"
-),
-'password' => array(
-	"Password",
-	"Contraseña"
-),
-'submit' => array(
-	"Submit",
-	"Enviar"
-)
+	'username' => array(
+		"Username",
+		"Nombre de usuario"
+	),
+	'password' => array(
+		"Password",
+		"Contraseña"
+	),
+	'submit' => array(
+		"Submit",
+		"Enviar"
+	),
+	'login' => array(
+		"Log In",
+		"Iniciar la Sesión"
+	)
+
 );
 ?>

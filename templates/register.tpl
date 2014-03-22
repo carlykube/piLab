@@ -1,6 +1,6 @@
 {include file="header.tpl" title=Register}
 
-<h2>Register</h2>
+<h2>{$register}</h2>
 <form class="userForm" method="POST" action="register.php" autocomplete="off">
 	<label for="firstname">{$firstname}: </label>
 
