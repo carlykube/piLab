@@ -4,26 +4,27 @@
 <form class="userForm" method="POST" action="register.php" autocomplete="off">
 	<label for="firstname">{$firstname}: </label>
 
-	<input type="text" name="fname" id="firstname" placeholder={$firstname}><br>
+	<input type="text" name="firstname" id="firstname" placeholder={$firstname}><br>
 	<label for="lastname">{$lastname}: </label>
-	<input type="text" name="lname" id="lastname" placeholder={$lastname}><br>
+	<input type="text" name="lastname" id="lastname" placeholder={$lastname}><br>
 
 	{$username}:<div id="usernameList"></div>
 	<label for="password">{$password}: </label>
-		<input type="password" name="password" placeholder="{$password}"><br>
+		<input type="password" name="password" id="password" placeholder={$password}><br>
 	<label for="confirmpassword">{$confirmpassword}: </label>
-		<input type="password" name="password" placeholder="{$password}"><br>
+		<input type="password" name="confirmpassword" id="confirmpassword" placeholder={$password}><br>
 	<label for="gender">{$gender}: </label>
 		<input type="radio" name="gender" value="m"> Male
 		<input type="radio" name="gender" value="f"> Female <br>
-	<label for="birthday">{$birthday}: </label>
 
-	<input type="text" name="bday" maxlength="10" placeholder={$birthday}><br>
+	<label for="birthday">{$birthday}: </label>
+		<input type="text" name="birthday" id="birthday" maxlength="10" placeholder={$birthday}><br>
 	<label for="hometown">{$hometown}: </label>
-	<input type="text" name="htown" placeholder={$hometown}><br>
+		<input type="text" name="hometown" id="hometown" placeholder={$hometown}><br>
+
 	<input type = "hidden" name = "form" value = "register">
 
-	<button>{$submit}</button>
+	<input type="submit" value={$submit}>
 </form>
 
 {include file="footer.tpl"}
