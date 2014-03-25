@@ -5,16 +5,16 @@
 
 	<div id="registrationtypes">
 		<div id="teacherDiv" class="roundedBackgroundBox spaceRight">
-			<img src="img/teacher_icon.png" alt="Teacher"><br>
-			<a href="?registrationtype=teacher">{$teacher}</a>
+			<a href="?registrationtype=teacher"><img src="img/teacher_icon.png" alt="Teacher"> 
+			{$teacher} </a>
 		</div>
 		<div id="mentorDiv" class="roundedBackgroundBox spaceRight">
-			<img src="img/mentor_icon.png" alt="Mentor"><br>
-			<a href="?registrationtype=mentor">{$mentor}</a>
+			<a href="?registrationtype=mentor"><img src="img/mentor_icon.png" alt="Mentor"><br>
+			{$mentor}</a>
 		</div>
 		<div id="studentDiv" class="roundedBackgroundBox">
-			<img src="img/student_icon.png" alt="Student"><br>
-			<a href="?registrationtype=student">{$student}</a>
+			<a href="?registrationtype=student"><img src="img/student_icon.png" alt="Student"><br>
+			{$student}</a>
 		</div>
 	</div>
 	
