@@ -39,6 +39,12 @@ nav a:hover {
 	background-color: #DDDDDD;
 }
 
+label{
+	 display: block;
+	 float: left;
+	 width: 6em;
+}
+
 #logoImg {
 	position:absolute;
 	float:left;

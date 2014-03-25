@@ -12,7 +12,7 @@
 	<label for="password">{$password}: </label>
 		<input type="password" name="password" id="password" placeholder={$password}><br>
 	<label for="confirmpassword">{$confirmpassword}: </label>
-		<input type="password" name="confirmpassword" id="confirmpassword" placeholder={$password}><br>
+		<input type="password" name="confirmpassword" id="confirmpassword" placeholder={$password}><br><br>
 	<label for="gender">{$gender}: </label>
 		<input type="radio" name="gender" value="m"> Male
 		<input type="radio" name="gender" value="f"> Female <br>
