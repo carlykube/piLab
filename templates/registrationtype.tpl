@@ -5,7 +5,7 @@
 
 	<div id="registrationtypes">
 		<div id="teacherDiv" class="roundedBackgroundBox spaceRight">
-			<a href="?registrationtype=teacher"><img src="img/teacher_icon.png" alt="Teacher"> 
+			<a href="?registrationtype=teacher"><img src="img/teacher_icon.png" alt="Teacher"><br> 
 			{$teacher} </a>
 		</div>
 		<div id="mentorDiv" class="roundedBackgroundBox spaceRight">

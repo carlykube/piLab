@@ -39,12 +39,16 @@
 					$this->username = $result['Username'];
 					$this->logged = true;
 					$_SESSION['user'] = serialize($this);
-					header("Location: index.php");
-					die("Redirecting to index.php");
+					header("Location: about.php");
+					die("Redirecting to about.php");
+				} else { // Wrong password
+					echo "<br><br>Invalid password!";
 				}
 			} else { //Wrong username
-				echo "Invalid username!";
+				//var_dump($this);
+				echo "<br><br>Invalid username!";
 			}
+			var_dump($result);
 			/**** Reverse commented code inside this function (login) to play with home page ********
 					$this->userid = 2;
 					$this->name = "Carly Kubacak";
