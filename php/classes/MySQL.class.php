@@ -4,8 +4,8 @@ class MySQL {
 	private $host = "localhost";
 
 	
-	private $user = "root";
-	private $password = ""; 
+	private $user = "pilab";
+	private $password = "ewbSMU"; 
    
 	private $dbname = "pilab";
 	private $c;
