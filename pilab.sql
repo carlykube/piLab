@@ -75,4 +75,3 @@ CREATE TABLE user_role (
 		REFERENCES roles (ID)
 );
 GRANT ALL ON pilab.* to pilab@localhost identified by 'ewbSMU'; 
-insert into letters(UserFrom, UserTo, Text, ) values();
