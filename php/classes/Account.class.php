@@ -10,6 +10,7 @@
 
 		function login() {
 			$username = $_POST['username'];
+
 			//Check to see if username exists...
 			$query = "SELECT * FROM users WHERE Username = :username;";
 			$params = array(
@@ -48,7 +49,9 @@
 				//var_dump($this);
 				echo "<br><br>Invalid username!";
 			}
+
 			var_dump($result);
+			
 			/**** Reverse commented code inside this function (login) to play with home page ********
 					$this->userid = 2;
 					$this->name = "Carly Kubacak";
@@ -60,7 +63,7 @@
 					$this->logged = true;
 					$_SESSION['user'] = serialize($this);
 					header("Location: home.php");
-			*******************************************************************************************/
+		*******************************************************************************************/
 		}
 
 		function register() {

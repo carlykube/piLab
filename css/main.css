@@ -4,7 +4,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 
 html {
-	background-image: url("../img/tree_bg.png");
+	background-image: url("../img/simpleMeadow.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
@@ -92,4 +92,10 @@ label{
 .roundedBackgroundBox {
 	border-radius: 2em;
 	margin-top: 2em;
+}
+
+/* ~~~~~ Home page letters ~~~~~~~~~~~ */
+.cloudLetter {
+	width: 50px;
+	height: 40px;
 }

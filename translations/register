@@ -42,7 +42,6 @@ $translations = array(
 		"Please enter your first and last names before picking a username",
 		"Por favor, entra su nombre y appellidos antes de escoger un nombre de usuario"
 	),
-
 	'whoareyou' => array(
 		"Who are you?",
 		"¿Quién eres tú?"
