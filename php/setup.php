@@ -69,6 +69,7 @@
 		}
 	}
 
+	$smarty->assign('logged', $user->logged);
 
 
 ?>
