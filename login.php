@@ -3,7 +3,7 @@
 require "php/setup.php";
 
 if($user->logged) {
-	header("Location: index.php");
+	header("Location: home.php");
 	die("Redirecting to index.php");
 }
 

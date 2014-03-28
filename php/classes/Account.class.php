@@ -39,7 +39,7 @@
 					$this->username = $result['Username'];
 					$this->logged = true;
 					$_SESSION['user'] = serialize($this);
-					header("Location: about.php");
+					header("Location: home.php");
 					die("Redirecting to about.php");
 				} else { // Wrong password
 					echo "<br><br>Invalid password!";
@@ -96,7 +96,6 @@
 		function logout(){
 			unset($_SESSION['user']);
 		}
-
 
 		function getUnreadLetters(){			
 			$query = "SELECT * FROM letters WHERE UserTo = :userid AND LetterRead IS FALSE;";
