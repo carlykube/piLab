@@ -39,6 +39,10 @@ nav a:hover {
 	background-color: #DDDDDD;
 }
 
+h1, h2, h3 {
+	margin-left: 10%;
+}
+
 label{
 	 display: block;
 	 float: left;
@@ -62,6 +66,22 @@ footer {
 /* Moves the top of the view to below the nav bar */
 #navSpace {
 	padding-bottom:50px;
+}
+
+/******************/
+/* GENERAL STYLES */
+/******************/
+
+.lightBackgroundBox {
+	background-color: rgba(250,250,250,0.75);
+	border-radius: 0.5em;
+	padding: 1em;
+	margin-top: 2em;
+}
+
+.divCenter {
+	width:80%;
+	margin: 0 auto;
 }
 
 /* ~~~~~ Registration types ~~~~~~~~~~~ */
