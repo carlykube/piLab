@@ -3,6 +3,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 /* ~~~~~~~~~~~~~~~~ End resets ~~~~~~~~~~~~~~~~~ */
 
 
+/*****************/
+/* HTML ELEMENTS */
+/*****************/
 html {
 	background-image: url("../img/prettyMeadow.png");
 	background-repeat: no-repeat;
@@ -14,6 +17,27 @@ body {
 	font-family: Arial,sans-serif;
 }
 
+h1, h2, h3 {
+	margin-left: 10%;
+}
+
+label{
+	 display: block;
+	 float: left;
+	 width: 6em;
+}
+
+footer {
+	position: fixed;
+	bottom: 10px;
+	border-top: 1px solid;
+	width: 100%;
+	text-align: center;
+}
+
+/******************/
+/* NAVIGATION BAR */
+/******************/
 nav {
 	position: fixed;
 	top:0;
@@ -39,22 +63,9 @@ nav a:hover {
 	background-color: #DDDDDD;
 }
 
-h1, h2, h3 {
-	margin-left: 10%;
-}
-
-label{
-	 display: block;
-	 float: left;
-	 width: 6em;
-}
-
-footer {
-	position: fixed;
-	bottom: 10px;
-	border-top: 1px solid;
-	width: 100%;
-	text-align: center;
+/* Moves the top of the view to below the nav bar */
+#navSpace {
+	padding-bottom:50px;
 }
 
 #logoImg {
@@ -63,19 +74,18 @@ footer {
 	max-height:100%;
 }
 
-/* Moves the top of the view to below the nav bar */
-#navSpace {
-	padding-bottom:50px;
-}
-
 /******************/
 /* GENERAL STYLES */
 /******************/
-
 .lightBackgroundBox {
 	background-color: rgba(250,250,250,0.75);
 	border-radius: 0.5em;
 	padding: 1em;
+	margin-top: 2em;
+}
+
+.roundedBackgroundBox {
+	border-radius: 2em;
 	margin-top: 2em;
 }
 
@@ -84,7 +94,9 @@ footer {
 	margin: 0 auto;
 }
 
-/* ~~~~~ Registration types ~~~~~~~~~~~ */
+/**********************/
+/* REGISTRATION TYPES */
+/**********************/
 #registrationtypes {
 	width:80%;
 	margin-left: auto;
@@ -107,16 +119,13 @@ footer {
 	background-color: rgba(53,160,203,0.7);
 }
 
-#registrationtypes .spaceRight {
+#registrationtypes :not(:last-child) {
 	margin-right:2%;
 }
 
-.roundedBackgroundBox {
-	border-radius: 2em;
-	margin-top: 2em;
-}
-
-/* ~~~~~ Home page letters ~~~~~~~~~~~ */
+/*********************/
+/* HOME PAGE LETTERS */
+/*********************/
 .cloudLetter {
 	width: 50px;
 	height: 40px;
