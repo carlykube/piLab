@@ -66,12 +66,12 @@
 		}
 
 		function register() {
-			$this->name=$_POST["fname"]." ".$_POST["lname"];
+			$this->name=$_POST["firstname"]." ".$_POST["lastname"];
 			$this->username=$_POST["username"];
 			$this->gender=$_POST["gender"];
-			$this->htown=$_POST["htown"];
-			$this->bday=$_POST["bday"];
-			
+			$this->htown=$_POST["hometown"];
+			$this->bday=$_POST["birthday"];
+
 			$salt= dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647));
 			$password = hash('sha256', $_POST['password'] . $salt);
 			for($round = 0; $round < 65536; $round++)
