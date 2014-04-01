@@ -1,6 +1,7 @@
-<div id="languageSelector">
+
+<footer>
 	{$languageLinks}
-</div>
+</footer>
 <script src="./js/zepto.min.js"></script>
 </body>
 </html>

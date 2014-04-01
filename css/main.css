@@ -45,6 +45,14 @@ label{
 	 width: 6em;
 }
 
+footer {
+	position: fixed;
+	bottom: 10px;
+	border-top: 1px solid;
+	width: 100%;
+	text-align: center;
+}
+
 #logoImg {
 	position:absolute;
 	float:left;
@@ -54,12 +62,6 @@ label{
 /* Moves the top of the view to below the nav bar */
 #navSpace {
 	padding-bottom:50px;
-}
-
-#languageSelector {
-	position: fixed;
-	bottom: 10px;
-	right: 10px;
 }
 
 /* ~~~~~ Registration types ~~~~~~~~~~~ */
@@ -73,7 +75,7 @@ label{
 	float:left;
 	text-align:center;
 	width:30%;
-	background-color: #6B70CC;
+	background-color: rgb(186, 224, 237);
 }
 
 #registrationtypes div img {
@@ -82,7 +84,7 @@ label{
 }
 
 #registrationtypes div:hover {
-	background-color: rgba(107,112,204,0.7);
+	background-color: rgba(53,160,203,0.7);
 }
 
 #registrationtypes .spaceRight {
