@@ -1,3 +1,4 @@
+
 <?php
 
 $translations = array(
@@ -17,6 +18,10 @@ $translations = array(
 	'password' => array(
 		"Password",
 		"Contraseña"
+	),
+	'confirmpassword' => array(
+		"Confirm Password",
+		"Confirmar contraseña"
 	),
 	'gender' => array(
 		"Gender",
@@ -39,34 +44,25 @@ $translations = array(
 		"Enviar"
 	),
 	'firstlastuser' => array(
-		"Please enter your first and last names before picking a username",
-		"Por favor, entra su nombre y appellidos antes de escoger un nombre de usuario"
+		"Please enter your first and last names<br>before picking a username",
+		"Por favor, entra su nombre y appellidos<br>antes de escoger un nombre de usuario"
 	),
 	'whoareyou' => array(
 		"Who are you?",
 		"¿Quién eres tú?"
 	),
-
-	'confirmpassword' => array(
-		"Confirm Password",
-		"Confirmar contraseña"
-	),
-
 	'teacher' => array(
 		"Teacher",
 		"Profesor"
 	),
-
 	'student' => array(
 		"Student",
 		"Estudiante"
 	),
-
 	'mentor' => array(
 		"Mentor",
 		"Mentores"
 	),
-
 	'register' => array(
 		"Register",
 		"Registrar"

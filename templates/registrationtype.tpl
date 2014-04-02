@@ -1,7 +1,7 @@
 {include file="header.tpl" title=Register}
 	
 	<!-- Add who are you here -->
-	<h3>{$whoareyou}</h3>
+	<h2>{$whoareyou}</h2>
 
 	<div id="registrationtypes">
 		<div id="teacherDiv" class="roundedBackgroundBox">
