@@ -13,7 +13,7 @@
 			{$mentor}</a>
 		</div>
 		<div id="studentDiv" class="roundedBackgroundBox">
-			<a href="?registrationtype=student"><img src="img/student_icon.png" alt="Student"><br>
+			<a href="?registrationtype=mentee"><img src="img/student_icon.png" alt="Student"><br>
 			{$student}</a>
 		</div>
 	</div>

@@ -12,6 +12,7 @@
 		<input type="radio" name="gender" value="f"> Female <br>
 		<input type="text" name="birthday" id="birthday" maxlength="10" placeholder={$birthday}><br>
 		<input type="text" name="hometown" id="hometown" placeholder={$hometown}><br>
+		<input type="hidden" name="regtype" id="regtype" value={$registrationtype}>
 		<input type = "hidden" name = "form" value = "register">
 		<input type="submit" value={$submit}>
 	</form>

@@ -36,9 +36,11 @@
 					$this->logged = true;
 					$_SESSION['acct'] = serialize($this);
 
-					$usr = new User($this->userid);
+					$usr = new User();
+					$usr->fillWithID($this->userid);
 
 					$_SESSION['user'] = serialize($usr);
+
 					header("Location: index.php");
 					die("Redirecting to index.php");
 				} else { // Wrong password
@@ -70,9 +72,37 @@
 				':password' => $password,
 				':salt' => $salt
 				);
-		$result = $GLOBALS['MySQL']->query($query,$params);
-		header("Location: login.php");
-		die("Redirecting to index.php");
+			$result = $GLOBALS['MySQL']->query($query,$params);
+
+			// Give the User a role
+			$role = $_POST["regtype"];
+			switch($role){
+				case "mentee":
+					$role = 1;
+					break;
+				case "mentor":
+					$role = 2;
+					break;
+				case "teacher":
+					$role = 3;
+					break;
+				default:	// default role is mentee
+					$role = 1;
+			}
+
+			// Get id of registered user
+			$tmpUser = new User();
+			$tmpUser->fillWithUsername($this->username);
+
+			$query = "INSERT INTO user_role(Usr, Role) VALUES(:userid, :role);";
+			$params = array(
+				':userid' => $tmpUser->getID(),
+				':role' => $role
+				);
+			$result = $GLOBALS['MySQL']->query($query,$params);
+
+			header("Location: login.php");
+			die("Redirecting to index.php");
 		}		
 		
 		function logout(){
