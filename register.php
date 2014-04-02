@@ -2,7 +2,7 @@
 
 require "php/setup.php";
 
-if($user->logged) {
+if($acct->logged) {
 	header("Location: index.php");
 	die("Redirecting to index.php");
 }

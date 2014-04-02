@@ -24,10 +24,12 @@
 	$MySQL = new MySQL();
 
 	//Account stuff...
+	if(isset($_SESSION['acct'])) $acct = unserialize($_SESSION['acct']);
+	else $acct = new Account();
+
+	// User stuff
 	if(isset($_SESSION['user'])) $user = unserialize($_SESSION['user']);
-	else $user = new Account();
-
-
+	else $user = new User();
 
 	include_once "./translations/".basename($_SERVER['SCRIPT_NAME'],'.php');
 	$Translator = new Translator($lang); //'en' for English; 'es' for Spanish
@@ -36,11 +38,11 @@
 	if(isset($_POST['form'])){
 		$form = $_POST['form'];
 		if($form =='login')
-			$user->login();
+			$acct->login();
 		else if($form == 'register')
-			$user->register();
+			$acct->register();
 		else if($form == 'logout')
-			$user->logout();
+			$acct->logout();
 	}
 
 
@@ -69,7 +71,7 @@
 		}
 	}
 
-	$smarty->assign('logged', $user->logged);
+	$smarty->assign('logged', $acct->logged);
 
 
 ?>

@@ -1,7 +1,7 @@
 <?php
 	class Account {
 		public $userid, $logged;
-		private $name, $username, $gender, $htown, $bday, $avatar;
+		private $username;
 
 
 		function __construct() {
@@ -16,8 +16,9 @@
 			$params = array(
 				':username' => $username
 			);
+
 			$result = $GLOBALS['MySQL']->query($query,$params)->fetch();
-			
+
 			if($result) { // username exists
 				$password = $_POST['password'];
 				
@@ -32,14 +33,12 @@
 				//Check hashed password against hashed password in DB
 				if($password == $result['Password']) { //Success!
 					$this->userid = $result['ID'];
-					$this->name = $result['Name'];
-					$this->gender = $result['Gender'];
-					$this->bday = $result['Birthday'];
-					$this->htown = $result['Hometown'];
-					$this->avatar = $result['Avatar'];
-					$this->username = $result['Username'];
 					$this->logged = true;
-					$_SESSION['user'] = serialize($this);
+					$_SESSION['acct'] = serialize($this);
+
+					$usr = new User($this->userid);
+
+					$_SESSION['user'] = serialize($usr);
 					header("Location: index.php");
 					die("Redirecting to index.php");
 				} else { // Wrong password
@@ -48,29 +47,11 @@
 			} else { //Wrong username
 				echo "<br><br>Invalid username!";
 			}
-
-			var_dump($result);
 			
-			/**** Reverse commented code inside this function (login) to play with home page ********
-					$this->userid = 2;
-					$this->name = "Carly Kubacak";
-					//$this->gender = $result[0]->Gender;
-					//$this->bday = $result[0]->Birthday;
-					//$this->htown = $result[0]->Hometown;
-					//$this->avatar = $result[0]->Avatar;
-					//$this->username = $result[0]->Username;
-					$this->logged = true;
-					$_SESSION['user'] = serialize($this);
-					header("Location: home.php");
-		*******************************************************************************************/
 		}
 
 		function register() {
-			$this->name=$_POST["firstname"]." ".$_POST["lastname"];
 			$this->username=$_POST["username"];
-			$this->gender=$_POST["gender"];
-			$this->htown=$_POST["hometown"];
-			$this->bday=$_POST["birthday"];
 
 			$salt= dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647));
 			$password = hash('sha256', $_POST['password'] . $salt);
@@ -81,35 +62,23 @@
 
 			$query = "INSERT INTO users(Name, Username, Gender, Birthday, Hometown, Password, Salt, Suspend) VALUES(:name, :username, :gender, :bday, :htown, :password, :salt, 0);";
 			$params = array(
-				':name' => $this->name,
+				':name' => $_POST["firstname"]." ".$_POST["lastname"],
 				':username' => $this->username,
-				':gender' => $this->gender,
-				':bday' => $this->bday,
-				':htown' => $this->htown,
+				':gender' => $_POST["gender"],
+				':bday' => $_POST["birthday"],
+				':htown' => $_POST["hometown"],
 				':password' => $password,
 				':salt' => $salt
 				);
 		$result = $GLOBALS['MySQL']->query($query,$params);
 		header("Location: login.php");
 		die("Redirecting to index.php");
-		}
-		
+		}		
 		
 		function logout(){
 			unset($_SESSION['user']);
-		}
-
-		function getUnreadLetters(){			
-			$query = "SELECT * FROM letters WHERE UserTo = :userid AND LetterRead IS FALSE;";
-			$params = array(
-				':userid' => $this->userid
-			);
-			$result = $GLOBALS['MySQL']->query($query,$params);
-			return $result->fetchAll();
-		}
-
-		function getName(){
-			return $this->name;
+			unset($_SESSION['acct']);
+			header("Location: index.php");
 		}
 
 	}

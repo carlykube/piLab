@@ -14,13 +14,18 @@ $GLOBALS['translations'] = array_merge ($GLOBALS['translations'], array(
 
 	'navbarlogin' => array(
 		"Login",
-		"Login"
+		"Inciar Session"
 	),
 
 	'navbarregister' => array(
 		"Register",
 		"Registrar"
-	)
+	),
+
+	'navbarlogout' => array(
+		"Logout",
+		"Cerrar session"
+	),
 )
 
 );

@@ -6,7 +6,8 @@
 		<a href="login.php" style="position:fixed;right:5px;">{$navbarlogin}</a>
 		<a href="register.php" style="position:fixed;right:75px;">{$navbarregister}</a>
 	{else}
-		<a href="logout.php" style="position:fixed;right:5px;">Logout</a>
+		<a href="logout.php" style="position:fixed;right:5px;">{$navbarlogout}</a>
+
 	{/if}
 	
 </nav>
