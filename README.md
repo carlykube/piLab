@@ -44,5 +44,5 @@ PHPMyAdmin is a helpful tool for performing operations on the MySQL database on 
 
 To access PHPMyAdmin
 ```
-127.0.0.1/phpmyadmin
+http://198.199.94.192//phpmyadmin
 ```

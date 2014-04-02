@@ -1,40 +1,35 @@
 <?php
+	//Need to use a session to maintain a user's logged-in state during their visit
 	session_start();
 
+	//Show errors for debugging purposes
 	error_reporting(E_ERROR | E_PARSE | E_NOTICE);
 
+	//Basic helper functions
 	require('core.php');
 
+	//Register classes folder for lazyloading
 	function autoloader($class) {
 		include_once './php/classes/'.$class.'.class.php';
 	}
-	spl_autoload_register('autoloader');
+	spl_autoload_register('autoloader');	
 
-	//Set language...
-	if(isset($_GET['lang'])) {
-		setcookie("lang",$_GET['lang'],time()+(2*365*24*60*60)); // Language cookie expires in 2 years
-		$lang = $_GET['lang'];
-	} elseif (!isset($_COOKIE['lang'])) {
-		$_COOKIE['lang'] = "en";
-		$lang = $_COOKIE['lang'];
-	} else {
-		$lang = $_COOKIE['lang'];
-	}
-
+	//Create MySQL connection for database access
 	$MySQL = new MySQL();
 
-	//Account stuff...
+	//Get account from session if already logged in; else, create a blank account
 	if(isset($_SESSION['acct'])) $acct = unserialize($_SESSION['acct']);
 	else $acct = new Account();
-
-	// User stuff
+	
+	// Get user from session if already logged in; else, create blank user
 	if(isset($_SESSION['user'])) $user = unserialize($_SESSION['user']);
 	else $user = new User();
-
-	include_once "./translations/".basename($_SERVER['SCRIPT_NAME'],'.php');
-	$Translator = new Translator($lang); //'en' for English; 'es' for Spanish
 	
-	// ~~~~ End setup
+	//Initialize Translator for multi-language support
+	include_once "./translations/".basename($_SERVER['SCRIPT_NAME'],'.php');
+	$Translator = new Translator(); //'en' for English; 'es' for Spanish
+
+	// Post-form routing	
 	if(isset($_POST['form'])){
 		$form = $_POST['form'];
 		if($form =='login')
@@ -47,10 +42,10 @@
 
 
 	//Render the page
-		require "./libs/Smarty.class.php";
-		$smarty = new Smarty;
+	require "./libs/Smarty.class.php";
+	$smarty = new Smarty;
 
-
+	//Define which language links should be displayed depending on the current language
 	if (isset($_GET['lang'])) {
 		if ($_GET['lang'] =='es') {
 			$smarty->assign('languageLinks', '<a href="?lang=en">English</a>');
@@ -71,7 +66,7 @@
 		}
 	}
 
+	//This is here because it's used on pretty much every page.
 	$smarty->assign('logged', $acct->logged);
-
-
 ?>
+

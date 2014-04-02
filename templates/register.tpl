@@ -1,31 +1,21 @@
 {include file="header.tpl" title=Register}
 
 <h2>{$register}</h2>
-<form class="userForm" method="POST" action="register.php" autocomplete="off">
-	<label for="firstname">{$firstname}: </label>
-
-	<input type="text" name="firstname" id="firstname" placeholder={$firstname}><br>
-	<label for="lastname">{$lastname}: </label>
-	<input type="text" name="lastname" id="lastname" placeholder={$lastname}><br>
-
-	{$username}:<div id="usernameList"></div>
-	<label for="password">{$password}: </label>
+<div class='divCenter'>
+	<form class="userForm lightBackgroundBox" method="POST" action="register.php" autocomplete="off">
+		<input type="text" name="firstname" id="firstname" placeholder={$firstname}><br>
+		<input type="text" name="lastname" id="lastname" placeholder={$lastname}><br>
+		{$username}:<div id="usernameList"></div>
 		<input type="password" name="password" id="password" placeholder={$password}><br>
-	<label for="confirmpassword">{$confirmpassword}: </label>
-		<input type="password" name="confirmpassword" id="confirmpassword" placeholder={$password}><br><br>
-	<label for="gender">{$gender}: </label>
+		<input type="password" name="confirmpassword" id="confirmpassword" placeholder={$confirmpassword}><br>
 		<input type="radio" name="gender" value="m"> Male
 		<input type="radio" name="gender" value="f"> Female <br>
-
-	<label for="birthday">{$birthday}: </label>
 		<input type="text" name="birthday" id="birthday" maxlength="10" placeholder={$birthday}><br>
-	<label for="hometown">{$hometown}: </label>
 		<input type="text" name="hometown" id="hometown" placeholder={$hometown}><br>
-
-	<input type = "hidden" name = "form" value = "register">
-
-	<input type="submit" value={$submit}>
-</form>
+		<input type = "hidden" name = "form" value = "register">
+		<input type="submit" value={$submit}>
+	</form>
+</div>
 
 {include file="footer.tpl"}
 

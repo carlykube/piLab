@@ -2,7 +2,7 @@
 
 <h2>{$aboutcd}</h2>
 
-<div>
+<div class="divCenter lightBackgroundBox">
 	<p>{$paragraph1}</p>
 	<p>{$paragraph2}</p>
 	<p>{$paragraph3}</p>

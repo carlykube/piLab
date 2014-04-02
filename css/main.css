@@ -3,17 +3,60 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 /* ~~~~~~~~~~~~~~~~ End resets ~~~~~~~~~~~~~~~~~ */
 
 
+/*****************/
+/* HTML ELEMENTS */
+/*****************/
 html {
 	background-image: url("../img/prettyMeadow.png");
 	background-repeat: no-repeat;
 	background-size: 100%;
+	height:100%;
 }
 
 body {
 	line-height:125%;
-	font-family: Arial,sans-serif;
+	font-family: 'Raleway', sans-serif;
+	height: 100%;
 }
 
+.container {
+	min-height: 100%;
+}
+
+h1, h2, h3 {
+	font-family: 'Lato', sans-serif;
+	margin-left: 10%;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+}
+
+form {
+	font: 'Raleway', sans-serif;
+}
+
+label{
+	 display: block;
+	 float: left;
+	 width: 6em;
+}
+
+footer {
+	position: relative;
+	bottom: 10px;
+	border-top: 1px solid;
+	width: 100%;
+	text-align: center;
+}
+
+/******************/
+/* NAVIGATION BAR */
+/******************/
 nav {
 	position: fixed;
 	top:0;
@@ -39,10 +82,9 @@ nav a:hover {
 	background-color: #DDDDDD;
 }
 
-label{
-	 display: block;
-	 float: left;
-	 width: 6em;
+/* Moves the top of the view to below the nav bar */
+#navSpace {
+	padding-bottom:50px;
 }
 
 #logoImg {
@@ -51,18 +93,29 @@ label{
 	max-height:100%;
 }
 
-/* Moves the top of the view to below the nav bar */
-#navSpace {
-	padding-bottom:50px;
+/******************/
+/* GENERAL STYLES */
+/******************/
+.lightBackgroundBox {
+	background-color: rgba(250,250,250,0.75);
+	border-radius: 0.5em;
+	padding: 1em;
+	margin-top: 2em;
 }
 
-#languageSelector {
-	position: fixed;
-	bottom: 10px;
-	right: 10px;
+.roundedBackgroundBox {
+	border-radius: 2em;
+	margin-top: 2em;
 }
 
-/* ~~~~~ Registration types ~~~~~~~~~~~ */
+.divCenter {
+	width:80%;
+	margin: 0 auto;
+}
+
+/**********************/
+/* REGISTRATION TYPES */
+/**********************/
 #registrationtypes {
 	width:80%;
 	margin-left: auto;
@@ -73,7 +126,7 @@ label{
 	float:left;
 	text-align:center;
 	width:30%;
-	background-color: #6B70CC;
+	background-color: rgb(186, 224, 237);
 }
 
 #registrationtypes div img {
@@ -81,21 +134,68 @@ label{
 	display:inline;
 }
 
-#registrationtypes div:hover {
-	background-color: rgba(107,112,204,0.7);
+#registrationtypes div a {
+	text-decoration: none;
 }
 
-#registrationtypes .spaceRight {
+#registrationtypes div:hover {
+	background-color: rgba(53,160,203,0.7);
+}
+
+#registrationtypes :not(:last-child) {
 	margin-right:2%;
 }
 
-.roundedBackgroundBox {
-	border-radius: 2em;
-	margin-top: 2em;
-}
-
-/* ~~~~~ Home page letters ~~~~~~~~~~~ */
+/*********************/
+/* HOME PAGE LETTERS */
+/*********************/
 .cloudLetter {
 	width: 50px;
 	height: 40px;
 }
+
+/**************/
+/* USER FORMS */
+/**************/
+.userForm{
+	text-align: center;
+	max-width:30%;
+	min-width:30%;
+	margin: 0 auto;
+}
+
+.userForm input[type=text], input[type=password]{
+	width:90%;
+	height:2em;
+	border:none;
+	text-indent: 0.3em;
+}
+
+.userForm input[type=text]:nth-of-type(odd), input[type=password]:nth-of-type(odd){
+	border-bottom: 0.1em solid gray;
+}
+
+.userForm input[type=text]:nth-of-type(even), input[type=password]:nth-of-type(even), input[type=radio]{
+	margin-bottom:0.4em;
+}
+
+.userForm input[type=submit] {
+	border: none;
+	border-radius:0.3em;
+	height:2em;
+    padding: 2px 8px;
+    width:90%;
+    background-color:rgb(53,160,203);
+}
+
+.userForm input[type=submit]:hover {
+    background-color:rgba(53,160,203,0.7);
+}
+
+.userForm .usernameRadio{
+	text-align: left;
+	margin-left: 5%;
+}
+
+
+
