@@ -9,6 +9,10 @@ $translations = array(
 		"Password",
 		"Contraseña"
 	),
+	'confirmpassword' => array(
+		"Confirm Password",
+		"Confirmar contraseña"
+	),
 	'submit' => array(
 		"Submit",
 		"Enviar"

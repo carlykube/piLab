@@ -1,7 +1,7 @@
 {include file="header.tpl" title=Register}
 
 <h2>{$register}</h2>
-<div class='divCenter' id='userForm'>
+<div class='divCenter'>
 	<form class="userForm lightBackgroundBox" method="POST" action="register.php" autocomplete="off">
 		<input type="text" name="firstname" id="firstname" placeholder={$firstname}><br>
 		<input type="text" name="lastname" id="lastname" placeholder={$lastname}><br>

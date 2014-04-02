@@ -157,29 +157,29 @@ nav a:hover {
 /**************/
 /* USER FORMS */
 /**************/
-#userForm{
+.userForm{
 	text-align: center;
 	max-width:30%;
 	min-width:30%;
 	margin: 0 auto;
 }
 
-#userForm input[type=text], input[type=password]{
+.userForm input[type=text], input[type=password]{
 	width:90%;
 	height:2em;
 	border:none;
 	text-indent: 0.3em;
 }
 
-#userForm input[type=text]:nth-of-type(odd), input[type=password]:nth-of-type(odd){
+.userForm input[type=text]:nth-of-type(odd), input[type=password]:nth-of-type(odd){
 	border-bottom: 0.1em solid gray;
 }
 
-#userForm input[type=text]:nth-of-type(even), input[type=password]:nth-of-type(even), input[type=radio]{
+.userForm input[type=text]:nth-of-type(even), input[type=password]:nth-of-type(even), input[type=radio]{
 	margin-bottom:0.4em;
 }
 
-#userForm input[type=submit] {
+.userForm input[type=submit] {
 	border: none;
 	border-radius:0.3em;
 	height:2em;
@@ -188,11 +188,11 @@ nav a:hover {
     background-color:rgb(53,160,203);
 }
 
-#userForm input[type=submit]:hover {
+.userForm input[type=submit]:hover {
     background-color:rgba(53,160,203,0.7);
 }
 
-#userForm .usernameRadio{
+.userForm .usernameRadio{
 	text-align: left;
 	margin-left: 5%;
 }
