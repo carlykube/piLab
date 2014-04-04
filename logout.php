@@ -2,8 +2,8 @@
 
 require "php/setup.php";
 
-$user->logout();
-header("Location: home.php");
+$acct->logout();
+header("Location: index.php");
 die("Redirecting to index.php");
 
 

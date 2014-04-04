@@ -17,24 +17,27 @@
 	//Create MySQL connection for database access
 	$MySQL = new MySQL();
 
-	//Get user from session if already logged in; else, create a blank user
+	//Get account from session if already logged in; else, create a blank account
+	if(isset($_SESSION['acct'])) $acct = unserialize($_SESSION['acct']);
+	else $acct = new Account();
+	
+	// Get user from session if already logged in; else, create blank user
 	if(isset($_SESSION['user'])) $user = unserialize($_SESSION['user']);
-	else $user = new Account();
-
+	else $user = new User();
+	
 	//Initialize Translator for multi-language support
 	include_once "./translations/".basename($_SERVER['SCRIPT_NAME'],'.php');
 	$Translator = new Translator(); //'en' for English; 'es' for Spanish
-
 
 	// Post-form routing	
 	if(isset($_POST['form'])){
 		$form = $_POST['form'];
 		if($form =='login')
-			$user->login();
+			$acct->login();
 		else if($form == 'register')
-			$user->register();
+			$acct->register();
 		else if($form == 'logout')
-			$user->logout();
+			$acct->logout();
 	}
 
 
@@ -64,5 +67,6 @@
 	}
 
 	//This is here because it's used on pretty much every page.
-	$smarty->assign('logged', $user->logged);
+	$smarty->assign('logged', $acct->logged);
 ?>
+

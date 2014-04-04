@@ -1,7 +1,7 @@
 {include file="header.tpl" title=Register}
 	
 	<!-- Add who are you here -->
-	<h3>{$whoareyou}</h3>
+	<h2>{$whoareyou}</h2>
 
 	<div id="registrationtypes">
 		<div id="teacherDiv" class="roundedBackgroundBox">
@@ -13,7 +13,7 @@
 			{$mentor}</a>
 		</div>
 		<div id="studentDiv" class="roundedBackgroundBox">
-			<a href="?registrationtype=student"><img src="img/student_icon.png" alt="Student"><br>
+			<a href="?registrationtype=mentee"><img src="img/student_icon.png" alt="Student"><br>
 			{$student}</a>
 		</div>
 	</div>
