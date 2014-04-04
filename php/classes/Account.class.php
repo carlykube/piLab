@@ -112,5 +112,13 @@
 			return $this->name;
 		}
 
+		static function searchUsers($query) {
+			$query = strtoupper($query);
+			$result = $GLOBALS['MySQL']->query('SELECT * FROM users WHERE upper(name) LIKE"%:query%";',array(
+				':query' => $query
+			));
+			$result = $result->fetchAll();
+			return $result;
+		}
 	}
 ?>
