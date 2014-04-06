@@ -1,8 +1,15 @@
 {include file="header.tpl" title=Register}
 
 <h2>{$register}</h2>
-<div class='divCenter'>
-	<form class="userForm lightBackgroundBox" method="POST" action="register.php" autocomplete="off">
+<div class='envelopes'>
+	<div>
+		La Finca<br>
+		Valle de los Angeles
+	</div>
+	<img src="img/postage_stamp.png" alt="Stamp">
+	<img src="img/envelope_front.png" alt="Envelope">
+	<img src="img/envelope_back.png" alt="Envelope">
+	<form id="registerForm" class="userForm" method="POST" action="register.php" autocomplete="off">
 		<input type="text" name="firstname" id="firstname" placeholder={$firstname}><br>
 		<input type="text" name="lastname" id="lastname" placeholder={$lastname}><br>
 		{$username}:<div id="usernameList"></div>
@@ -41,7 +48,7 @@ function updateUsernames() {
 		$('#usernameList').html('');
 		var usernames = generateUsernames();
 		$.each(usernames,function(index,value) {
-			$('#usernameList').append("<div class='usernameRadio'><input type='radio' name='username' value='"+value+"'>"+value+"</div>");
+			$('#usernameList').append("<div class='usernameRadio'><input type='radio' name='username' value='"+value+"'>"+value+"</div><br>");
 		});
 	}
 }
