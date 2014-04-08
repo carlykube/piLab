@@ -2,6 +2,10 @@
 	<img id="logoImg" src="img/logo_holder.png" alt="Logo" title="Logo">
 	<a href="index.php">{$navbarhome}</a>
 	<a href="about.php">{$navbarabout}</a>
+	<form method="get" action="search.php">
+		<input type="text" name="query">
+		<button type="submit">Search!</button>
+	</form>
 	{if !$logged}
 		<a href="login.php" style="position:fixed;right:5px;">{$navbarlogin}</a>
 		<a href="register.php" style="position:fixed;right:75px;">{$navbarregister}</a>
