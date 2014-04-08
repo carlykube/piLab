@@ -1,0 +1,9 @@
+<?php
+$translations = array(
+'title' => array(
+	"Forgot Password",
+	"Olvidaste la contraseña"
+	)
+);
+
+?>
