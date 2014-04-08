@@ -1,16 +1,19 @@
 <?php
 $translations = array(
-'title' => array(
-	"Create letter",
-	"Crear la carta"
+	
+	'title' => array(
+		"Write letter",
+		"Escribir carta"
 	),
-'type' => array(
-	"Type message here...",
-	"Tipo de mensaje aqui..."
+
+	'typeHere' => array(
+		"Type message here...",
+		"Tipea mensaje aqui..."
 	),
-'submit' => array(
-	"submit",
-	"presentar"
+
+	'submit' => array(
+		"Mail Letter",
+		"Enviar Carta"
 	)
 
 );

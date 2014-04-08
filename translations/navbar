@@ -26,6 +26,11 @@ $GLOBALS['translations'] = array_merge ($GLOBALS['translations'], array(
 		"Logout",
 		"Cerrar session"
 	),
+
+	'navbarcreate' => array(
+		"Write Letter",
+		"Escribir Carta"
+	)
 )
 
 );

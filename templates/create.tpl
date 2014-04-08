@@ -3,8 +3,8 @@
 <h2>{$title}</h2>
 <form id="create" class='userForm' method="POST" action="create.php">
 
-		<textarea rows="25" cols="100"> {$type} </textarea>
-		<br/>
+		<textarea rows="25" cols="100" name="message" id="message" placeholder={$typeHere} required></textarea>
+		<br>
 		<input type="submit" value={$submit}> 
 		<input type="hidden" value="create" name = "form"> 
 		
