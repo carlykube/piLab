@@ -38,6 +38,8 @@
 			$acct->register();
 		else if($form == 'logout')
 			$acct->logout();
+		else if($form == 'create')
+			Letter::send();
 	}
 
 

@@ -1,9 +1,18 @@
 <?php
 $translations = array(
 'title' => array(
-	"Forgot Password",
-	"Olvidaste la contraseña"
+	"Create letter",
+	"Crear la carta"
+	),
+'type' => array(
+	"Type message here...",
+	"Tipo de mensaje aqui..."
+	),
+'submit' => array(
+	"submit",
+	"presentar"
 	)
+
 );
 
 ?>
