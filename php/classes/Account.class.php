@@ -121,16 +121,16 @@
 		}
 
 		static function forgotPassword($username) {
-			// check for valid username (if valid: reset, if not: notify and reroute)
+			// check for valid username (if valid: reset, if not: notify and exit function)
 
 			// determine which type of user needs to reset his/her password
 			// Create a User variable and use fillWithUsername() function in User class
 			
 			// if (acct == mentee), reset password mentee
 
-			// if (acct == mentee), reset password admin
+			// if (acct == admin), reset password admin
 
-			// if (acct == mentee), reset password mentor
+			// if (acct == mentor), reset password mentor
 		}
 
 	}
