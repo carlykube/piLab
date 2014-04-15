@@ -113,11 +113,25 @@
 
 		static function searchUsers($query) {
 			$query = strtoupper($query);
-			$result = $GLOBALS['MySQL']->query('SELECT * FROM users WHERE upper(name) LIKE"%:query%";',array(
-				':query' => $query
+			$result = $GLOBALS['MySQL']->query('SELECT * FROM users WHERE UPPER(name) LIKE :query',array(
+				':query' => '%'.$query.'%'
 			));
 			$result = $result->fetchAll();
 			return $result;
 		}
+
+		static function forgotPassword($username) {
+			// check for valid username (if valid: reset, if not: notify and exit function)
+
+			// determine which type of user needs to reset his/her password
+			// Create a User variable and use fillWithUsername() function in User class
+			
+			// if (acct == mentee), reset password mentee
+
+			// if (acct == admin), reset password admin
+
+			// if (acct == mentor), reset password mentor
+		}
+
 	}
 ?>

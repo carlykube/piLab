@@ -16,9 +16,15 @@
 		<a href="register.php" style="position:fixed;right:75px;">{$navbarregister}</a>
 	</div>
 	{else}
+		<a href="create.php">{$navbarcreate}</a>
 		<a href="logout.php" style="position:fixed;right:5px;">{$navbarlogout}</a>
-
 	{/if}
+	
+	<form method="get" action="search.php">
+		<input type="text" name="query">
+		<button type="submit">Search!</button>
+	</form>
+
 	
 </nav>
 

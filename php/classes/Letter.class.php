@@ -9,9 +9,19 @@
 			
 		}
 
-		function send() 
+		static function send($idFrom, $idTo, $msg) 
 		{
-			
+			$query = "INSERT INTO letters(UserFrom, UserTo, Text) VALUES(:sender, :receiver, :txt);";
+			$params = array(
+				'sender' => $idFrom,
+				'receiver' => $idTo,
+				'txt' => $msg
+			);
+			$result = $GLOBALS['MySQL']->query($query,$params);
+
+			// Should add error checking
+			header("Location: index.php");
+
 		}
 
 		function savedraft()

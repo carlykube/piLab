@@ -4,7 +4,7 @@ require "php/setup.php";
 
 $Translator->assignAllVariables();
 
-$query = $_GET['search'];
+$query = $_GET['query'];
 $results = Account::searchUsers($query);
 
 $smarty->assign('results', $results);

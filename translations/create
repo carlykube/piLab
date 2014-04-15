@@ -1,0 +1,21 @@
+<?php
+$translations = array(
+	
+	'title' => array(
+		"Write letter",
+		"Escribir carta"
+	),
+
+	'typeHere' => array(
+		"Type message here...",
+		"Tipea mensaje aqui..."
+	),
+
+	'submit' => array(
+		"Mail Letter",
+		"Enviar Carta"
+	)
+
+);
+
+?>

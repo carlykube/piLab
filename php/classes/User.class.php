@@ -71,6 +71,20 @@
 			return $result->fetchAll();
 		}
 
+		function addContact($contactID){
+			// LOOK AT send() in the Letter class for an example
+
+			// query that inserts both userids into contacts table
+			// bind the parameters
+			// execute the query using the GLOBAL MySQL variable query function
+			// send user back to search results (search.php?query=VALHERE) OR homepage (index.php)
+		}
+
+		function getContacts(){
+			// Follow logic in the getUnreadLetters function, but use the contacts table
+			// In the query, you will need to use a join to get the user information from users table
+		}
+
 		function getName(){
 			return $this->name;
 		}
@@ -78,6 +92,5 @@
 		function getID(){
 			return $this->userid;
 		}
-
 	}
 ?>

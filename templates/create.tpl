@@ -1,10 +1,15 @@
 {include file="header.tpl" title="Create Letter"}
 
-<h2>Create Letter</h2>
-<form method="POST" action="create.php">
-		<textarea rows="25" cols="100"> Type message here... </textarea>
-		<br/>
-		<input type="submit" value="submit"> 
+<h2>{$title}</h2>
+<form id="create" class='userForm' method="POST" action="create.php">
+
+		<textarea rows="25" cols="100" name="message" id="message" placeholder={$typeHere} required></textarea>
+		<br>
+		<input type="submit" value={$submit}> 
+		<input type="hidden" value="create" name = "form"> 
+		
 </form>
 
 {include file="footer.tpl"}
+
+
