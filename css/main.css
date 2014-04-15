@@ -158,14 +158,6 @@ input::-webkit-input-placeholder {
 	margin-right:2%;
 }
 
-/*********************/
-/* HOME PAGE LETTERS */
-/*********************/
-.cloudLetter {
-	width: 50px;
-	height: 40px;
-}
-
 /**************/
 /* USER FORMS */
 /**************/
@@ -270,4 +262,36 @@ input::-webkit-input-placeholder {
 	width:40%;
 	opacity:0.75;
 	-webkit-transform:rotate(25deg);
+}
+
+/*************/
+/* Home Page */
+/*************/
+.smallMargin{
+	margin-left: 1%;
+	margin-top: 10px;
+}
+
+.holder{
+	width: 80%;
+	height: 100%;
+	margin-bottom: 15px;
+}
+
+.letter{
+    margin:4px 4px 4px 4px;
+    padding: 10px;
+    float:left;
+    width:320px;
+    height:158px;
+    background-color:#FFFFFF;
+    border: solid 2px #000000;
+}
+
+#nameTo{
+	text-align: center;
+}
+
+#clearer{
+    clear:both;
 }
