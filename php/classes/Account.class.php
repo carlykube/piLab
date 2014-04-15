@@ -119,5 +119,19 @@
 			$result = $result->fetchAll();
 			return $result;
 		}
+
+		static function forgotPassword($username) {
+			// check for valid username (if valid: reset, if not: notify and reroute)
+
+			// determine which type of user needs to reset his/her password
+			// Create a User variable and use fillWithUsername() function in User class
+			
+			// if (acct == mentee), reset password mentee
+
+			// if (acct == mentee), reset password admin
+
+			// if (acct == mentee), reset password mentor
+		}
+
 	}
 ?>
