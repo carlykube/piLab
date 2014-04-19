@@ -276,6 +276,7 @@ input::-webkit-input-placeholder {
 	width: 80%;
 	height: 100%;
 	margin-bottom: 15px;
+	padding: 30px;
 }
 
 .letter{
@@ -295,3 +296,70 @@ input::-webkit-input-placeholder {
 #clearer{
     clear:both;
 }
+
+/***************/
+/* Search Page */
+/***************/
+
+.contactBox{
+    margin:6px 6px 6px 6px;
+    padding: 10px;
+    float:left;
+    width:20%;
+    height:250px;
+    background-color:rgb(232,81,81);
+    border: solid 4px #000000;
+    border-radius: 2em;
+}
+
+div.contactBox div.name {
+	text-align: center;
+	font-size: x-large;
+	font-family: 'Lato', sans-serif;
+	margin: 10px;
+}
+
+div.contactBox div.title {
+	text-align: center;
+	font-size: large;
+	font-family: 'Lato', sans-serif;
+	margin-top: 10px;
+}
+
+div.contactBox div.content {
+	text-align: center;
+	font-size: medium;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 5px;
+}
+
+div.contactBox form{
+	text-align: center;
+	margin: 10px;
+}
+
+.contactBox button {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #86d956), color-stop(1, #65cb2e) );
+	background:-moz-linear-gradient( center top, #86d956 5%, #65cb2e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#86d956', endColorstr='#65cb2e');
+	border-radius: 0.7em;
+	border:0px solid #000000;
+	font-family: Raleway;
+	font-size:13px;
+	font-weight:bold;
+	font-style:normal;
+	height:33px;
+	width:85%;
+	text-decoration:none;
+	text-align:center;
+}
+.contactBox button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #65cb2e), color-stop(1, #86d956) );
+	background:-moz-linear-gradient( center top, #65cb2e 5%, #86d956 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#65cb2e', endColorstr='#86d956');
+	background-color:#65cb2e;
+}.contactBox button:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
