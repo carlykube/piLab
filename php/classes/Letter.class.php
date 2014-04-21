@@ -19,8 +19,12 @@
 			);
 			$result = $GLOBALS['MySQL']->query($query,$params);
 
+			echo "<br><br><br>";
+			var_dump($params);
+			var_dump($result);
+
 			// Should add error checking
-			header("Location: index.php");
+			// header("Location: index.php");
 
 		}
 

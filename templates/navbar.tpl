@@ -16,10 +16,10 @@
 		<a href="register.php" style="position:fixed;right:75px;">{$navbarregister}</a>
 	</div>
 	{else}
-	<div class="navbarElement">
+<!-- 	<div class="navbarElement">
 		<a href="create.php"><img src="img/envelope_dark.png" alt="Create" title="Create"><br>
 			{$navbarcreate}</a>
-	</div>
+	</div> -->
 		<a href="logout.php" style="position:fixed;right:5px;">{$navbarlogout}</a>
 	{/if}
 	

@@ -81,8 +81,7 @@
 		}
 
 		// Returns array of user id's
-		function getContacts(){
-			
+		function getContactIds(){
 			$query = "SELECT UserTwo FROM contacts WHERE UserOne=:uid;";
 			$params = array(
 				'uid' => $this->userid
@@ -92,12 +91,27 @@
 			return $result->fetchAll(PDO::FETCH_COLUMN, 0);		
 		}
 
+		function getContacts(){			
+			$query = "SELECT t2.ID, Name, Username, Gender, Hometown, Birthday, Avatar
+						FROM contacts t1 join users t2
+						ON t1.UserTwo=t2.ID 
+						WHERE UserOne=:uid
+						ORDER BY Name;";
+			$params = array(
+				'uid' => $this->userid
+			);
+			$result = $GLOBALS['MySQL']->query($query,$params);
+
+			return $result->fetchAll(PDO::FETCH_ASSOC);	
+
+		}
+
 		// Delete user contacts from list of passed in users
 		function removeUserContacts($list){
-			$contacts = $this->getContacts();
+			$contacts = $this->getContactIds();
 			$final = array();
 			foreach ($list as $key => $val){
-				if (in_array($val['ID'], $contacts) == FALSE)
+				if (in_array($val['ID'], $contacts) == FALSE && $val['ID'] != $this->userid)
 					$final[] = $val;
 			}
 			return $final;

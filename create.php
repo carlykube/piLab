@@ -1,14 +1,15 @@
 <?php
 
-require "php/setup.php";
+	require "php/setup.php";
 
-$Translator->assignAllVariables();
+	$Translator->assignAllVariables();
 
-if (isset($_POST['message'])){
-	$msg = $_POST['message'];
-	Letter::send($user->getID(), 19, $msg);
-}
+	if (isset($_POST['message'])){
+		$msg = $_POST['message'];
+		Letter::send($user->getID(), $_POST['letterTo'], $msg);
+	}
 
-$smarty->display('create.tpl');
+	$smarty->assign('letterTo', $_GET['letterTo']);
+	$smarty->display('create.tpl');
 
 ?>
