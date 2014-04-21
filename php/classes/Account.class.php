@@ -116,7 +116,7 @@
 			$result = $GLOBALS['MySQL']->query('SELECT * FROM users WHERE UPPER(name) LIKE :query',array(
 				':query' => '%'.$query.'%'
 			));
-			$result = $result->fetchAll();
+			$result = $result->fetchAll(PDO::FETCH_ASSOC);
 			return $result;
 		}
 

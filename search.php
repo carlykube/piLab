@@ -1,13 +1,23 @@
 <?php
 
-require "php/setup.php";
+	require "php/setup.php";
 
-$Translator->assignAllVariables();
+	$Translator->assignAllVariables();
 
-$query = $_GET['query'];
-$results = Account::searchUsers($query);
+	$query = $_GET['query'];
+	$results = Account::searchUsers($query);
 
-$smarty->assign('results', $results);
-$smarty->display('search.tpl');
+	// If user logged in, remove contacts from results
+	if ($acct->logged)
+		$results = $user->removeUserContacts($results);
+
+	$smarty->assign('results', $results);
+	$smarty->assign('query', $query);
+
+	if (isset($_POST['contactID'])){
+		$user->addContact($_POST['contactID']);
+	}
+
+	$smarty->display('search.tpl');
 
 ?>

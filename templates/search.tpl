@@ -14,11 +14,14 @@
 			{/if}
 			<div class="title">Hometown</div>
 			<div class="content">{$value['Hometown']}</div>	
-			<div class="divCenter">
-				<form id="form" action="addContact.php" method="get">
-					<button type="submit">Add Contact</button>
-				</form>	
-			</div>	
+			{if $logged}			
+				<div class="divCenter">
+					<form id="form" action="search.php?query={$query}" method="POST">
+						<input type="hidden" name="contactID" value={$value['ID']}>
+						<button type="submit">Add Contact</button>
+					</form>	
+				</div>				
+			{/if}
 		</div>
 	{/foreach}
 	<div id="clearer"></div>

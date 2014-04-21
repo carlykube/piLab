@@ -343,7 +343,7 @@ div.contactBox form{
 	background:-moz-linear-gradient( center top, #86d956 5%, #65cb2e 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#86d956', endColorstr='#65cb2e');
 	border-radius: 0.7em;
-	border:0px solid #000000;
+	border:2px solid #000000;
 	font-family: Raleway;
 	font-size:13px;
 	font-weight:bold;
