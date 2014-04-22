@@ -106,17 +106,6 @@
 
 		}
 
-		// Delete user contacts from list of passed in users
-		function removeUserContacts($list){
-			$contacts = $this->getContactIds();
-			$final = array();
-			foreach ($list as $key => $val){
-				if (in_array($val['ID'], $contacts) == FALSE && $val['ID'] != $this->userid)
-					$final[] = $val;
-			}
-			return $final;
-		}
-
 		function getName(){
 			return $this->name;
 		}
