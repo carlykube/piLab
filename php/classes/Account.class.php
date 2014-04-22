@@ -44,10 +44,10 @@
 					header("Location: index.php");
 					die("Redirecting to index.php");
 				} else { // Wrong password
-					echo "<br><br>Invalid password!";
+					errorMessage('Invalid password!');
 				}
 			} else { //Wrong username
-				echo "<br><br>Invalid username!";
+				errorMessage('Invalid username!');
 			}
 			
 		}
