@@ -117,6 +117,21 @@
 				':query' => '%'.$query.'%'
 			));
 			$result = $result->fetchAll(PDO::FETCH_ASSOC);
+			$friends = $GLOBALS['MySQL']->query('SELECT * FROM contacts WHERE UserOne = :id OR UserTwo = :id', array(
+				':id' => $GLOBALS['acct']->userid
+			));
+			$friends = $friends->fetchAll(PDO::FETCH_ASSOC);
+			foreach($result as $k => $v) {
+				foreach($friends as $friendkey => $friendvalue) {
+					if($result[$k]['ID'] == $friends[$friendkey]['UserOne'] || $result[$k]['ID'] == $friends[$friendkey]['UserTwo']) {
+						$result[$k]['friends'] = true;
+						break;
+					}
+				}
+				if(!isset($result[$k]['friends']) || !$result[$k]['friends']) {
+					$result[$k]['friends'] = false;
+				}			
+			}
 			return $result;
 		}
 

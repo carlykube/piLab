@@ -9,7 +9,15 @@
 		Letter::send($user->getID(), $_POST['letterTo'], $msg);
 	}
 
+	$recipient = new User();
+	$recipient->fillWithID($_GET['letterTo']);
+	$date = getdate();
+	$date = $date['month']. " " .$date['mday']. ", " .$date['year'];
+
 	$smarty->assign('letterTo', $_GET['letterTo']);
+	$smarty->assign('date', $date);
+	$smarty->assign('recipient', $recipient->getName());
+	$smarty->assign('sender', $user->getName());
 	$smarty->display('create.tpl');
 
 ?>
