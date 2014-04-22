@@ -199,6 +199,37 @@ input::-webkit-input-placeholder {
 	text-indent: 0.3em;
 }
 
+.userForm input[type=text]:nth-of-type(odd), .userform input[type=password]:nth-of-type(odd){
+	border-bottom: 0.1em solid gray;
+}
+
+.userForm input[type=text]:nth-of-type(even), .userform input[type=password]:nth-of-type(even), .userform input[type=radio]{
+	margin-bottom:0.4em;
+}
+
+.userForm input[type=submit] {
+	border: none;
+	border-radius:0.3em;
+	height:2em;
+    padding: 2px 8px;
+    width:90%;
+    background-color:rgb(53,160,203);
+}
+
+.userForm input[type=submit]:hover {
+    background-color:rgba(53,160,203,0.7);
+}
+
+
+.userForm .usernameRadio{
+	text-align: center;
+	position:absolute;
+}
+
+/***********************/
+/* Reset Password Form */
+/***********************/
+
 #changePasswordForm {
 	padding-top:10%;
 	max-width:30%;
@@ -237,33 +268,6 @@ input::-webkit-input-placeholder {
 
 .resetPassForm input[type=submit]:hover {
     background-color:rgba(53,160,203,0.7);
-}
-
-.userForm input[type=text]:nth-of-type(odd), .userform input[type=password]:nth-of-type(odd){
-	border-bottom: 0.1em solid gray;
-}
-
-.userForm input[type=text]:nth-of-type(even), .userform input[type=password]:nth-of-type(even), .userform input[type=radio]{
-	margin-bottom:0.4em;
-}
-
-.userForm input[type=submit] {
-	border: none;
-	border-radius:0.3em;
-	height:2em;
-    padding: 2px 8px;
-    width:90%;
-    background-color:rgb(53,160,203);
-}
-
-.userForm input[type=submit]:hover {
-    background-color:rgba(53,160,203,0.7);
-}
-
-
-.userForm .usernameRadio{
-	text-align: center;
-	position:absolute;
 }
 
 

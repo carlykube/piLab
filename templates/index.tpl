@@ -26,7 +26,7 @@
 					<div class="title">Username</div>
 					<div class="content">{$value['Username']}</div>
 					<div class="title">Gender</div>
-					{if ($value['Gender']) }
+					{if ($value['Gender'] == 'm') }
 						<div class="content">Male</div>
 					{else}
 						<div class="content">Female</div>
