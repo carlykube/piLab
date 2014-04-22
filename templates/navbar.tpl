@@ -24,6 +24,7 @@
 	{/if}
 	
 	<form method="get" action="search.php">
+		<br/>
 		<input type="text" name="query">
 		<button type="submit">Search!</button>
 	</form>
