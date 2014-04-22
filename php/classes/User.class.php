@@ -113,5 +113,9 @@
 		function getID(){
 			return $this->userid;
 		}
+
+		function getHtown(){
+			return $this->htown;
+		}
 	}
 ?>

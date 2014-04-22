@@ -192,7 +192,7 @@ input::-webkit-input-placeholder {
 	width:42%;
 }
 
-.userForm input[type=text], input[type=password]{
+.userForm input[type=text], .userForm input[type=password]{
 	width:90%;
 	height:2em;
 	border:none;
@@ -428,3 +428,41 @@ div.contactBox form{
 	top:1px;
 }
 /* This button was generated using CSSButtonGenerator.com */
+
+
+/**********************/
+/* Create Letter Page */
+/**********************/
+.createLetter p.date{
+	float: right;
+}
+
+.createLetter div.submit{
+	text-align: center;
+}
+
+.letterForm input[type=submit] {
+	border: none;
+	border-radius:0.3em;
+	height:2em;
+    padding: 2px 8px;
+    width:40%;
+    background-color:rgb(53,160,203);
+}
+
+.letterForm input[type=submit]:hover {
+    background-color:rgba(53,160,203,0.7);
+}
+
+#message{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #999;
+}
+
+.createLetter{
+	border: 15px solid;
+}

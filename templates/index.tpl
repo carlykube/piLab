@@ -7,9 +7,10 @@
 			{if count($unreadLetters) > 0}
 				{foreach $unreadLetters as $key=>$item}
 				<div class="letter">
-					<div id="nameFrom"> {$item['UserFrom']} </div>
+					<div id="nameFrom"> {$item['SenderName']} </div>
+					<div id="htown"> {$item['SenderHtown']} </div> <br>
 					<div id="nameTo"> {$name} </div>
-					<p>{$item['Text']}</p><br>
+					<!-- <p>{$item['Text']}</p><br> -->
 				</div>
 				{/foreach}
 			{else}
