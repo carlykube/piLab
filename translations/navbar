@@ -4,7 +4,7 @@
 $GLOBALS['translations'] = array_merge ($GLOBALS['translations'], array(
 	'navbarhome' => array(
 		"Home",
-		"Página de Inicio"
+		"Inicio"
 	),
 
 	'navbarabout' => array(

@@ -11,8 +11,6 @@
 	{if !$logged}
 	<div class="navbarElement">
 		<a href="login.php" style="position:fixed;right:5px;">{$navbarlogin}</a>
-	</div>
-	<div class="navbarElement">
 		<a href="register.php" style="position:fixed;right:75px;">{$navbarregister}</a>
 	</div>
 	{else}
@@ -21,13 +19,13 @@
 			{$navbarcreate}</a>
 	</div> -->
 		<a href="logout.php" style="position:fixed;right:5px;">{$navbarlogout}</a>
-	{/if}
-	
+		
 	<form method="get" action="search.php">
+		<br/>
 		<input type="text" name="query">
 		<button type="submit">Search!</button>
 	</form>
-
+	{/if}
 	
 </nav>
 
