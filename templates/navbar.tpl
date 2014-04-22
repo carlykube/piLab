@@ -21,14 +21,13 @@
 			{$navbarcreate}</a>
 	</div> -->
 		<a href="logout.php" style="position:fixed;right:5px;">{$navbarlogout}</a>
-	{/if}
-	
+		
 	<form method="get" action="search.php">
 		<br/>
 		<input type="text" name="query">
 		<button type="submit">Search!</button>
 	</form>
-
+	{/if}
 	
 </nav>
 
