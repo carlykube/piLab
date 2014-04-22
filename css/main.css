@@ -188,6 +188,7 @@ input::-webkit-input-placeholder {
 	text-align: center;
 	margin: 0 auto;
 	z-index: 1;
+	width:42%;
 }
 
 .userForm input[type=text], input[type=password]{
@@ -197,11 +198,51 @@ input::-webkit-input-placeholder {
 	text-indent: 0.3em;
 }
 
-.userForm input[type=text]:nth-of-type(odd), input[type=password]:nth-of-type(odd){
+#changePasswordForm {
+	padding-top:10%;
+	max-width:30%;
+	min-width:30%;
+}
+
+.resetpassForm{
+	text-align: center;
+	margin: 0 auto;
+	z-index: 1;
+}
+
+.resetpassForm input[type=text], .resetpassForm input[type=password]{
+	width:90%;
+	height:2em;
+	border:none;
+	text-indent: 0.3em;
+}
+
+.resetpassForm #adminusername{
+	width:90%;
+	height:2em;
+	border:none;
+	text-indent: 0.3em;
+	margin-top: 0.7em;
+}
+
+.resetpassForm input[type=submit] {
+	border: none;
+	border-radius:0.3em;
+	height:2em;
+    padding: 2px 8px;
+    width:90%;
+    background-color:rgb(53,160,203);
+}
+
+.resetPassForm input[type=submit]:hover {
+    background-color:rgba(53,160,203,0.7);
+}
+
+.userForm input[type=text]:nth-of-type(odd), .userform input[type=password]:nth-of-type(odd){
 	border-bottom: 0.1em solid gray;
 }
 
-.userForm input[type=text]:nth-of-type(even), input[type=password]:nth-of-type(even), input[type=radio]{
+.userForm input[type=text]:nth-of-type(even), .userform input[type=password]:nth-of-type(even), .userform input[type=radio]{
 	margin-bottom:0.4em;
 }
 

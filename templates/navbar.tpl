@@ -10,7 +10,7 @@
 	</div>
 	{if !$logged}
 	<div class="navbarElement">
-		<a href="login.php" style="position:fixed;right:5px;">{$navbarlogin}</a>
+		<a href="login.php" style="position:fixed;right:15px;">{$navbarlogin}</a>
 		<a href="register.php" style="position:fixed;right:75px;">{$navbarregister}</a>
 	</div>
 	{else}

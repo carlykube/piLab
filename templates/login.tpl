@@ -17,4 +17,8 @@
 	</form>
 </div>
 
+<div style="text-align:center">
+	<a href="forgotPassword.php">{$forgotpassword}</a>
+</div>
+
 {include file="footer.tpl"}
