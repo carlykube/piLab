@@ -11,7 +11,7 @@
 	<img src="img/envelope_back.png" alt="Envelope">
 	<form id="logInForm" class='userForm' method="POST" action="login.php">
 		<input type="text" name="username" id="username" placeholder={$username} required><br>
-		<input type="password" name="password" id="password" placeholder={$confirmpassword} required><br>
+		<input type="password" name="password" id="password" placeholder={$password} required><br>
 		<input type="hidden" name="form" value="login">
 		<input type="submit" value={$submit}>
 	</form>
