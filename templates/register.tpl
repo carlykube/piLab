@@ -15,12 +15,12 @@
 		{$username}:<div id="usernameList"></div>
 		<input type="password" name="password" id="password" placeholder={$password}><br>
 		<input type="password" name="confirmpassword" id="confirmpassword" placeholder={$confirmpassword}><br>
-		<input type="radio" name="gender" value="m"> Male
+		{$gender}: <input type="radio" name="gender" value="m"> Male
 		<input type="radio" name="gender" value="f"> Female <br>
-		<input type="text" name="birthday" id="birthday" maxlength="10" placeholder={$birthday}><br>
+		{$birthday}: <input type="date" name="birthday" id="birthday" placeholder={$birthday}><br>
 		<input type="text" name="hometown" id="hometown" placeholder={$hometown}><br>
 		<input type="hidden" name="regtype" id="regtype" value={$registrationtype}>
-		<input type = "hidden" name = "form" value = "register">
+		<input type="hidden" name = "form" value = "register">
 		<input type="submit" value={$submit}>
 	</form>
 </div>
