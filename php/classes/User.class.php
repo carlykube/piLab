@@ -118,7 +118,7 @@
 			return $this->htown;
 		}
 
-		function getAllUsers() {
+		static function getAllUsers() {
 			return $GLOBALS['MySQL']->query(
 				"SELECT ID,Name,Username,Gender,Birthday,Hometown,Avatar FROM users",
 				array())->fetchAll();
