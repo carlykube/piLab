@@ -1,14 +1,20 @@
 {include file="header.tpl" title="Create Letter"}
 
 <h2>{$title}</h2>
-<form id="create" class='userForm' method="POST" action="create.php">
+<div class="createLetter">
+<form id="create" class='letterForm' method="POST" action="create.php">
+		<p class='date'>{$date}</p><br><br>
+		<p>Dear {$recipient},</p>
+		<textarea rows="40" cols="10" name="message" id="message" placeholder={$typeHere} required></textarea>
+		<p>From,<br> {$sender}</p><br>
+		<div class="submit">  
+			<input type="submit" value={$submit}>
+		</div>  
 
-		<textarea rows="25" cols="100" name="message" id="message" placeholder={$typeHere} required></textarea>
-		<br>
-		<input type="submit" value={$submit}> 
-		<input type="hidden" value="create" name = "form"> 
-		
+		<input type="hidden" name="letterTo" value={$letterTo}> 
+		<input type="hidden" value="create" name = "form"> 		
 </form>
+</div>
 
 {include file="footer.tpl"}
 

@@ -19,7 +19,6 @@
 			);
 			$result = $GLOBALS['MySQL']->query($query,$params);
 
-			// Should add error checking
 			header("Location: index.php");
 
 		}

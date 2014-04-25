@@ -1,13 +1,26 @@
 <?php
 
-require "php/setup.php";
+	require "php/setup.php";
 
-$Translator->assignAllVariables();
+	if (isset($_POST['contactID'])){
+		$user->addContact($_POST['contactID']);
+	}
 
-$query = $_GET['query'];
-$results = Account::searchUsers($query);
+	if(!$acct->logged) {
+		header("Location: login.php");
+		die("Need to login before searching!");
+	}
+	
+	$Translator->assignAllVariables();
 
-$smarty->assign('results', $results);
-$smarty->display('search.tpl');
+	$query = $_GET['query'];
+	$results = Account::searchUsers($query);
+
+	$smarty->assign('results', $results);
+	$smarty->assign('query', $query);
+
+	
+
+	$smarty->display('search.tpl');
 
 ?>

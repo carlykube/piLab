@@ -44,10 +44,10 @@
 					header("Location: index.php");
 					die("Redirecting to index.php");
 				} else { // Wrong password
-					echo "<br><br>Invalid password!";
+					errorMessage('Invalid password!');
 				}
 			} else { //Wrong username
-				echo "<br><br>Invalid username!";
+				errorMessage('Invalid username!');
 			}
 			
 		}
@@ -116,7 +116,22 @@
 			$result = $GLOBALS['MySQL']->query('SELECT * FROM users WHERE UPPER(name) LIKE :query',array(
 				':query' => '%'.$query.'%'
 			));
-			$result = $result->fetchAll();
+			$result = $result->fetchAll(PDO::FETCH_ASSOC);
+			$friends = $GLOBALS['MySQL']->query('SELECT * FROM contacts WHERE UserOne = :id OR UserTwo = :id', array(
+				':id' => $GLOBALS['acct']->userid
+			));
+			$friends = $friends->fetchAll(PDO::FETCH_ASSOC);
+			foreach($result as $k => $v) {
+				foreach($friends as $friendkey => $friendvalue) {
+					if($result[$k]['ID'] == $friends[$friendkey]['UserOne'] || $result[$k]['ID'] == $friends[$friendkey]['UserTwo']) {
+						$result[$k]['friends'] = true;
+						break;
+					}
+				}
+				if(!isset($result[$k]['friends']) || !$result[$k]['friends']) {
+					$result[$k]['friends'] = false;
+				}			
+			}
 			return $result;
 		}
 

@@ -55,14 +55,15 @@
           <use xlink:href="#shape-tab"></use>
         </svg>
         <span>{$navbarlogout}</span>
-
       </a>
-       <a href="" id="rightTab" class="rightTab">
+      {if $role == "admin"}
+       <a href="admin.php" id="rightTab" class="rightTab">
         <svg viewBox="0 0 100 25" class="shape-tab-right">
           <use xlink:href="#shape-tab-right"></use>
         </svg>
-        <span>Account</span>
+        <span>Admin</span>
       </a>
+      {/if}
       {/if}
 
 

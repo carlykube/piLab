@@ -66,7 +66,9 @@
 		}
 	}
 
+	//Assign user role for navbar
+	$smarty->assign('role', $user->getRole());
+
 	//This is here because it's used on pretty much every page.
 	$smarty->assign('logged', $acct->logged);
 ?>
-

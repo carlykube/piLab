@@ -72,17 +72,38 @@
 		}
 
 		function addContact($contactID){
-			// LOOK AT send() in the Letter class for an example
-
-			// query that inserts both userids into contacts table
-			// bind the parameters
-			// execute the query using the GLOBAL MySQL variable query function
-			// send user back to search results (search.php?query=VALHERE) OR homepage (index.php)
+			$query = "INSERT INTO contacts(UserOne, UserTwo) VALUES(:one, :two);";
+			$params = array(
+				'one' => $this->userid,
+				'two' => $contactID
+			);
+			$result = $GLOBALS['MySQL']->query($query,$params);
 		}
 
-		function getContacts(){
-			// Follow logic in the getUnreadLetters function, but use the contacts table
-			// In the query, you will need to use a join to get the user information from users table
+		// Returns array of user id's
+		function getContactIds(){
+			$query = "SELECT UserTwo FROM contacts WHERE UserOne=:uid;";
+			$params = array(
+				'uid' => $this->userid
+			);
+			$result = $GLOBALS['MySQL']->query($query,$params);
+
+			return $result->fetchAll(PDO::FETCH_COLUMN, 0);		
+		}
+
+		function getContacts(){			
+			$query = "SELECT t2.ID, Name, Username, Gender, Hometown, Birthday, Avatar
+						FROM contacts t1 join users t2
+						ON t1.UserTwo=t2.ID 
+						WHERE UserOne=:uid
+						ORDER BY Name;";
+			$params = array(
+				'uid' => $this->userid
+			);
+			$result = $GLOBALS['MySQL']->query($query,$params);
+
+			return $result->fetchAll(PDO::FETCH_ASSOC);	
+
 		}
 
 		function getName(){
@@ -91,6 +112,24 @@
 
 		function getID(){
 			return $this->userid;
+		}
+
+		function getHtown(){
+			return $this->htown;
+		}
+
+		function getRole() {
+			return $GLOBALS['MySQL']->query(
+				"SELECT Name FROM roles A LEFT JOIN user_role B ON A.ID = B.Role WHERE B.Usr = :userid",
+				array(
+					':userid' => $GLOBALS['user']->userid
+				))->fetch()['Name'];
+		}
+
+		static function getAllUsers() {
+			return $GLOBALS['MySQL']->query(
+				"SELECT ID,Name,Username,Gender,Birthday,Hometown,Avatar FROM users",
+				array())->fetchAll();
 		}
 	}
 ?>

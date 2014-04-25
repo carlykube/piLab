@@ -20,7 +20,10 @@ $translations = array(
 	'login' => array(
 		"Log In",
 		"Iniciar la Sesión"
+	),
+	'forgotpassword' => array(
+		"I forgot my password!",
+		"Olvidé mi contraseña!"
 	)
-
 );
 ?>

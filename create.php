@@ -1,14 +1,23 @@
 <?php
 
-require "php/setup.php";
+	require "php/setup.php";
 
-$Translator->assignAllVariables();
+	$Translator->assignAllVariables();
 
-if (isset($_POST['message'])){
-	$msg = $_POST['message'];
-	Letter::send($user->getID(), 19, $msg);
-}
+	if (isset($_POST['message'])){
+		$msg = $_POST['message'];
+		Letter::send($user->getID(), $_POST['letterTo'], $msg);
+	}
 
-$smarty->display('create.tpl');
+	$recipient = new User();
+	$recipient->fillWithID($_GET['letterTo']);
+	$date = getdate();
+	$date = $date['month']. " " .$date['mday']. ", " .$date['year'];
+
+	$smarty->assign('letterTo', $_GET['letterTo']);
+	$smarty->assign('date', $date);
+	$smarty->assign('recipient', $recipient->getName());
+	$smarty->assign('sender', $user->getName());
+	$smarty->display('create.tpl');
 
 ?>
