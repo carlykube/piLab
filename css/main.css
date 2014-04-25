@@ -11,9 +11,9 @@ html {
 	background-size: 100%;
 	height:100%;
 }
+*/
 
 body {
-	line-height:125%;
 	font-family: 'Raleway', sans-serif;
 	height: 100%;
 }
@@ -22,7 +22,6 @@ body {
 .container {
 	min-height: 100%;
 }
-
 
 h1, h2, h3 {
 	font-family: 'Lato', sans-serif;
@@ -53,52 +52,6 @@ footer {
 	border-top: 1px solid;
 	width: 100%;
 	text-align: center;
-}
-
-/******************/
-/* NAVIGATION BAR */
-/******************/
-nav {
-	position: fixed;
-	top:0;
-	left:0;
-	width:100%;
-	height:4em;
-	border-bottom: 2px solid #ccc;
-	background: #f9f9f9;
-	z-index: 5;
-}
-
-#logoImg{
-	max-height:100%;
-	width:4em;
-	height:4em;
-	float:left;
-}
-
-.navbarElement {
-	text-align: center;
-	padding-top:0.5em;
-	float:left;
-}
-
-.navbarElement:hover {
-	background-color: #DDDDDD;
-}
-
-.navbarElement img {
-	width:2em;
-	margin: 0 auto;
-	padding: 0 1em;
-}
-
-.navbarElement a {
-	text-decoration: none;
-}
-
-/* Moves the top of the view to below the nav bar */
-#navSpace {
-	padding-bottom:5.1em;
 }
 
 /******************/
@@ -270,4 +223,360 @@ input::-webkit-input-placeholder {
 	width:40%;
 	opacity:0.75;
 	-webkit-transform:rotate(25deg);
+}
+
+/*!
+  Adapted for piLab from:
+  Theme Name: CSS-Tricks v11
+  Theme URI: http://css-tricks.com/
+  Description: The Theme for CSS-Tricks dude.
+  Author: Chris Coyier
+  Version: 11
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Tags: orange, css
+*/
+nav {
+    font-size: 17px;
+    line-height: 1.5;
+    padding-top:0.5em;
+    padding:1em;
+}
+
+
+
+.hide {
+    display: none
+}
+
+@media screen {
+    *, *::after, *::before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box
+    }
+
+    a {
+        text-decoration: none
+    }
+}
+
+@media screen {
+    .main-nav {
+        font-size: 0;
+        position: relative
+    }
+
+    .main-nav a {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        height: 50px;
+        color: #444;
+        font-family: 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin: 0 0 0 -50px
+    }
+
+    /* Tab 1 */
+    .main-nav a.tab1 {
+        margin-left: 0;
+        z-index: 100
+    }
+
+    /* Tab 1 */
+    .main-nav a.tab1 svg {
+        fill: #e18728
+    }
+
+    /* Tab 1 */
+    .main-nav a.tab1:hover svg, .main-nav a.tab1:active svg {
+        fill: #d27a1d
+    }
+}
+
+@media screen {
+    /* Tab 2 */
+    .main-nav a.tab2 {
+        z-index: 90
+    }
+
+    /* Tab 2 */
+    .main-nav a.tab2 svg {
+        fill: #be4c39
+    }
+
+    /* Tab 2 */
+    .main-nav a.tab2:hover svg, .main-nav a.tab2:active svg {
+        fill: #a43
+    }
+}
+
+@media screen {
+    /* Tab 2 */
+    .tab2 .main-nav a.tab2 {
+        z-index: 200
+    }
+
+    /* Tab 3 */
+    .main-nav a.tab3 {
+        z-index: 80
+    }
+
+    /* Tab 3 */
+    .main-nav a.tab3 svg {
+        fill: #9351a6
+    }
+
+    /* Tab 3 */
+    .main-nav a.tab3:hover svg, .main-nav a.tab3:active svg {
+        fill: #844995
+    }
+}
+
+@media screen {
+    /* Tab 3 */
+    .tab3 .main-nav a.tab3 {
+        z-index: 200
+    }
+
+    /* Tab 4 */
+    .main-nav a.tab4 {
+        z-index: 70
+    }
+
+    /* Tab 4 */
+    .main-nav a.tab4 svg {
+        fill: #4472b9
+    }
+
+    /* Tab 4 */
+    .main-nav a.tab4:hover svg, .main-nav a.tab4:active svg {
+        fill: #3d67a6
+    }
+}
+
+@media screen and (max-width: 1081px) {
+    /* Controls hover effects */
+    .main-nav a.tab1:hover, .main-nav a.tab1:active {
+        background: #d27a1d
+    }
+
+    .main-nav a.tab2:hover, .main-nav a.tab2:active {
+        background: #a43
+    }
+
+    .main-nav a.tab3:hover, .main-nav a.tab3:active {
+        background: #844995
+    }
+
+    .main-nav a.tab4:hover, .main-nav a.tab4:active {
+        background: #3d67a6
+    }
+
+    .main-nav a.tab5:hover, .main-nav a.tab5:active {
+        background: #44934b
+    }
+
+    .main-nav a.rightTab:hover, .main-nav a.rightTab:active {
+        background: #e1e1e1
+    }
+}
+
+@media screen {
+    /* Tab 4 */
+     .tab4 .main-nav a.tab4 {
+        z-index: 200
+    }
+
+    /* Tab 5 */
+    .main-nav a.tab5 {
+        z-index: 60
+    }
+
+    /* Tab 5 */
+    .main-nav a.tab5 svg {
+        fill: #4ca454
+    }
+
+    /* Tab 5 */
+    .main-nav a.tab5:hover svg, .main-nav a.tab5:active svg {
+        fill: #44934b
+    }
+}
+
+@media screen {
+    /* Tab 5 */
+    .bbpress .main-nav a.tab5 {
+        z-index: 200
+    }
+
+    /* Right Tab */
+    .main-nav a.rightTab {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        width: 250px;
+        height: 62.5px;
+        z-index: 60;
+        font-size: 1rem;
+        margin: 0
+    }
+
+    /* Right Tab */
+    .main-nav a.rightTab span {
+        color: #222;
+        text-shadow: none;
+        padding: 21px 0 0 45px
+    }
+
+    /* Right Tab */
+    .main-nav a.rightTab span em {
+        font-style: normal
+    }
+}
+
+@media screen {
+    /* Right Tab */
+    .main-nav a.rightTab svg, nav.rightTab .main-nav a.rightTab svg {
+        fill: #eee
+    }
+
+    /* Right Tab */
+    .main-nav a.rightTab:hover svg, .main-nav a.rightTab:active svg {
+        fill: #e1e1e1
+    }
+}
+
+@media screen {
+    /* Right Tab */
+    .rightTab .main-nav a.rightTab {
+        z-index: 200
+    }
+
+    .main-nav a .shape-tab {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    .main-nav a span {
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 15px 40px 0 0;
+        text-align: center;
+        text-shadow: 0 0 7px rgba(0, 0, 0, 0.4)
+    }
+
+    .main-nav:after {
+        content: "";
+        display: block;
+        height: 10px;
+        background: #ccc
+    }
+
+    /* Controls bottom highlight bar for current page */
+    .tab1 .main-nav:after, .single .main-nav:after {
+        background: #e18728
+    }
+
+    .tab2 .main-nav:after {
+        background: #be4c39
+    }
+
+    .tab3 .main-nav:after  {
+        background: #9351a6
+    }
+
+    .tab4 .main-nav:after {
+        background: #4472b9
+    }
+
+    /* Remove? */
+    .bbpress .main-nav:after {
+        background: #4ca454
+    }
+}
+
+/* Medium screen and smaller */
+@media screen and (max-width: 1081px) {
+    .main-nav a {
+        font-size: 0;
+        width: 16.66667% !important;
+        height: auto !important;
+        margin: 0;
+        text-align: center;
+        padding: 10px 2px;
+    }
+
+    .main-nav a svg {
+        display: none
+    }
+
+    .main-nav a span {
+        font-size: 0.8rem;
+        position: static;
+        display: inline;
+        padding: 0 !important
+    }
+
+    /* Tab 1 */
+    .main-nav a.tab1 {
+        background: #e18728
+    }
+
+    /* Tab 2 */
+    .main-nav a.tab2 {
+        background: #be4c39
+    }
+
+    /* Tab 3 */
+    .main-nav a.tab3 {
+        background: #9351a6
+    }
+
+    /* Tab 4 */
+    .main-nav a.tab4 {
+        background: #4472b9
+    }
+
+    /* Tab 5 */
+    .main-nav a.tab5 {
+        background: #4ca454
+    }
+
+    /* Right Tab */
+    .main-nav a.rightTab {
+        background: #eee;
+        font-size: 0.8rem;
+        position: static
+    }
+}
+
+/* Small screen */
+@media screen and (max-width: 697px) {
+    .main-nav {
+        width: 101%
+    }
+
+    .main-nav a {
+        padding: 8px 2px;
+        width: 33.33333% !important;
+        /*border: 2px solid #000*/
+    }
+
+    /* Hides highlight bar under tabs */
+    .main-nav:after {
+        display: none
+    }
 }
