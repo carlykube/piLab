@@ -30,6 +30,10 @@ $GLOBALS['translations'] = array_merge ($GLOBALS['translations'], array(
 	'navbarcreate' => array(
 		"Write Letter",
 		"Escribir Carta"
+	),
+	'navbaradmin' => array(
+		"Administration",
+		"Ad"
 	)
 )
 

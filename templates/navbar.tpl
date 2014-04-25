@@ -18,7 +18,10 @@
 		<a href="create.php"><img src="img/envelope_dark.png" alt="Create" title="Create"><br>
 			{$navbarcreate}</a>
 	</div> -->
-		<a href="logout.php" style="position:fixed;right:5px;">{$navbarlogout}</a>
+	{if $role == "admin"}
+		<a href="admin.php">{$navbaradmin}</a>
+	{/if}
+	<a href="logout.php" style="position:fixed;right:5px;">{$navbarlogout}</a>
 		
 	<form method="get" action="search.php">
 		<br/>
@@ -26,7 +29,6 @@
 		<button type="submit">Search!</button>
 	</form>
 	{/if}
-	
 </nav>
 
 <!-- Moves the top of the view to below the nav bar -->

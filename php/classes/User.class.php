@@ -118,6 +118,14 @@
 			return $this->htown;
 		}
 
+		function getRole() {
+			return $GLOBALS['MySQL']->query(
+				"SELECT Name FROM roles A LEFT JOIN user_role B ON A.ID = B.Role WHERE B.Usr = :userid",
+				array(
+					':userid' => $GLOBALS['user']->userid
+				))->fetch()['Name'];
+		}
+
 		static function getAllUsers() {
 			return $GLOBALS['MySQL']->query(
 				"SELECT ID,Name,Username,Gender,Birthday,Hometown,Avatar FROM users",
