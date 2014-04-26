@@ -10,8 +10,8 @@
 					<img src="img/postage_stamp.png" alt="Stamp">
 					<div id="nameFrom"> {$item['SenderName']} </div>
 					<div id="htown"> {$item['SenderHtown']} </div> <br>
-					<div id="nameTo"> {$name} </div>
-					<a href="letter.php?id={$item['ID']}">Read Letter</a>
+					<div id="nameTo"> {$name} </div><br>
+					<div id ="letterLink" align = center><a href="letter.php?id={$item['ID']}">Read Letter</a></div>
 					<!-- <p>{$item['Text']}</p><br> -->
 				</div>
 				{/foreach}
