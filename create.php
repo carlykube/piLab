@@ -11,6 +11,7 @@
 
 	$recipient = new User();
 	$recipient->fillWithID($_GET['letterTo']);
+	date_default_timezone_set("America/Chicago");
 	$date = getdate();
 	$date = $date['month']. " " .$date['mday']. ", " .$date['year'];
 

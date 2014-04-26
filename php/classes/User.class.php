@@ -132,7 +132,7 @@
 
 		static function getAllUsers() {
 			return $GLOBALS['MySQL']->query(
-				"SELECT ID,Name,Username,Gender,Birthday,Hometown,Avatar FROM users",
+				"SELECT ID,Name,Username,Gender,Birthday,Hometown,Avatar,Suspend FROM users",
 				array())->fetchAll();
 		}
 	}
