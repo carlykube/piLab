@@ -809,3 +809,15 @@ div.contactBox form{
     line-height: 140%;
     font-family: 'Handlee', 'cursive';
 }
+
+/*********/
+/* ABOUT */
+/*********/
+
+#about img {
+    width:30%;
+    height:30%;
+    float:left;
+    padding-right:1em;
+}
+

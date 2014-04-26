@@ -2,7 +2,8 @@
 
 <h2>{$aboutcd}</h2>
 
-<div class="divCenter lightBackgroundBox">
+<div id="about" class="divCenter lightBackgroundBox">
+	<img src="img/pilab_logo.png" alt="piLab Logo">
 	<p>{$paragraph1}</p>
 	<p>{$paragraph2}</p>
 	<p>{$paragraph3}</p>
