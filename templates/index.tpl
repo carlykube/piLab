@@ -7,6 +7,7 @@
 			{if count($unreadLetters) > 0}
 				{foreach $unreadLetters as $key=>$item}
 				<div class="letter">
+					<img src="img/postage_stamp.png" alt="Stamp">
 					<div id="nameFrom"> {$item['SenderName']} </div>
 					<div id="htown"> {$item['SenderHtown']} </div> <br>
 					<div id="nameTo"> {$name} </div>
@@ -20,7 +21,11 @@
 		<div id="clearer"></div>
 	</div>
 	<div id="contactsDiv" class="divCenter lightBackgroundBox holder">
-		<h2 class="smallMargin"> Address Book </h2>
+		<h2 class="smallMargin"> Address Book </h2><br>
+		<form method="get" action="search.php">
+			<input type="text" name="query">
+			<button type="submit">Search!</button>
+		</form><br>
 		{if count($contacts) > 0}
 			{foreach $contacts as $key=>$value}
 				<div class="contactBox">

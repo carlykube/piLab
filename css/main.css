@@ -646,6 +646,7 @@ nav {
 .smallMargin{
 	margin-left: 1%;
 	margin-top: 10px;
+    margin-bottom: 0em;
 }
 
 .holder{
@@ -663,6 +664,13 @@ nav {
     height:158px;
     background-color:#FFFFFF;
     border: solid 2px #000000;
+}
+
+.letter img {
+    position:absolute;
+    width:4em;
+    height:2.5em;
+    margin-left: 14.5em;
 }
 
 .createLetter{
@@ -686,14 +694,24 @@ nav {
 /***************/
 
 .contactBox{
-    margin:6px 6px 6px 6px;
-    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     float:left;
     width:20%;
     height:250px;
     background-color:rgb(232,81,81);
     border: solid 4px #000000;
     border-radius: 2em;
+}
+
+#contactsDiv h2 {
+    float:left;
+    padding-bottom: 2px;
+}
+
+#contactsDiv form input {
+    margin-left: 2em;
 }
 
 div.contactBox div.name {
