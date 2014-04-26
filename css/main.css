@@ -11,11 +11,12 @@ html {
 	background-attachment:fixed;
 	background-size: 100%;
 	height:100%;
-}
-*/
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: 800;
+    }
+
 
 body {
-	font-family: 'Raleway', sans-serif;
 	height: 100%;
 }
 
@@ -25,7 +26,6 @@ body {
 }
 
 h1, h2, h3 {
-	font-family: 'Lato', sans-serif;
 	margin-left: 15%;
 }
 
@@ -37,10 +37,22 @@ h2 {
 	font-size: 2em;
 }
 
-form {
-	font: 'Raleway', sans-serif;
+p {
+    font-family: 'Raleway', 'cursive';
+    font-size: 1.5em;
+    font-weight: 400;
 }
 
+form {
+	
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 label{
 	 display: block;
 	 float: left;
@@ -322,11 +334,9 @@ nav {
         width: 200px;
         height: 50px;
         color: #444;
-        font-family: 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
-        font-weight: 500;
+        font-weight: 800;
         font-style: normal;
         font-size: 1rem;
-        text-transform: uppercase;
         margin: 0 0 0 -50px
     }
 
@@ -689,21 +699,18 @@ nav {
 div.contactBox div.name {
 	text-align: center;
 	font-size: x-large;
-	font-family: 'Lato', sans-serif;
 	margin: 10px;
 }
 
 div.contactBox div.title {
 	text-align: center;
 	font-size: large;
-	font-family: 'Lato', sans-serif;
 	margin-top: 10px;
 }
 
 div.contactBox div.content {
 	text-align: center;
 	font-size: medium;
-	font-family: 'Raleway', sans-serif;
 	margin-top: 5px;
 }
 
@@ -718,7 +725,6 @@ div.contactBox form{
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#86d956', endColorstr='#65cb2e');
 	border-radius: 0.7em;
 	border:2px solid #000000;
-	font-family: Raleway;
 	font-size:13px;
 	font-weight:bold;
 	font-style:normal;
@@ -742,36 +748,46 @@ div.contactBox form{
 /**********************/
 /* Create Letter Page */
 /**********************/
-.createLetter p.date{
+
+.createLetter {
+    border: 10px solid;
+}
+
+.createLetter p {
+    font-family: 'Handlee', 'cursive';
+}
+
+.createLetter p.date {
 	float: right;
 }
 
-.createLetter div.submit{
+.createLetter div.submit {
 	text-align: center;
 }
 
-.letterForm input[type=submit] {
+.createLetter input[type=submit] {
 	border: none;
 	border-radius:0.3em;
 	height:2em;
     padding: 2px 8px;
     width:40%;
     background-color:rgb(53,160,203);
+    font-family: 'Handlee', 'cursive';
 }
 
-.letterForm input[type=submit]:hover {
+.createLetter input[type=submit]:hover {
     background-color:rgba(53,160,203,0.7);
 }
 
-#message{
+/* Letter text field */
+.createLetter textarea {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
 	padding: 10px;
-	border: 2px solid #999;
-}
-
-.createLetter{
-	border: 15px solid;
+	border: 0px;
+    font-size: 1.5em;
+    line-height: 140%;
+    font-family: 'Handlee', 'cursive';
 }
