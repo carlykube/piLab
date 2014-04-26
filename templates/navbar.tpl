@@ -63,6 +63,13 @@
         </svg>
         <span>Admin</span>
       </a>
+      {else}
+       <a href="account.php" id="rightTab" class="rightTab">
+        <svg viewBox="0 0 100 25" class="shape-tab-right">
+          <use xlink:href="#shape-tab-right"></use>
+        </svg>
+        <span>Account</span>
+      </a>
       {/if}
       {/if}
 
