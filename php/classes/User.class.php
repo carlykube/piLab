@@ -4,19 +4,20 @@
 		private $account, $name, $username, $gender, $htown, $bday, $avatar, $role;
 
 
-		function __construct() {			
+		function __construct() {
 			$this->userid = 0;
+			$this->role = -1;
 		}
 
 		function fillWithID($id){
 			$this->userid = $id;
-			
+
 			$query = "SELECT Name, Username, Gender, Birthday, Hometown FROM users WHERE ID = :userid";
 			$params = array(
 				'userid' => $id
 			);
 			$result = $GLOBALS['MySQL']->query($query,$params)->fetchAll();
-			
+
 			if (count($result) == 1){
 				$usr = $result[0];
 				$this->name = $usr['Name'];
@@ -24,20 +25,20 @@
 				$this->gender = $usr['Gender'];
 				$this->bday = $usr['Birthday'];
 				$this->htown = $usr['Hometown'];
-			}			
+			}
 
 			$this->fillRole();
 		}
 
 		function fillWithUsername($username){
 			$this->username = $username;
-			
+
 			$query = "SELECT Name, ID, Gender, Birthday, Hometown FROM users WHERE Username = :username";
 			$params = array(
 				'username' => $username
 			);
 			$result = $GLOBALS['MySQL']->query($query,$params)->fetchAll();
-			
+
 			if (count($result) == 1){
 				$usr = $result[0];
 				$this->name = $usr['Name'];
@@ -56,13 +57,13 @@
 				'id' => $this->userid
 			);
 			$result = $GLOBALS['MySQL']->query($query,$params)->fetchAll();
-			
+
 			if (count($result) == 1){
 				$this->role = $result[0]['Role'];
-			}			
+			}
 		}
 
-		function getUnreadLetters(){			
+		function getUnreadLetters(){
 			$query = "SELECT * FROM letters WHERE UserTo = :userid AND LetterRead IS FALSE;";
 			$params = array(
 				':userid' => $this->userid
@@ -88,13 +89,13 @@
 			);
 			$result = $GLOBALS['MySQL']->query($query,$params);
 
-			return $result->fetchAll(PDO::FETCH_COLUMN, 0);		
+			return $result->fetchAll(PDO::FETCH_COLUMN, 0);
 		}
 
-		function getContacts(){			
+		function getContacts(){
 			$query = "SELECT t2.ID, Name, Username, Gender, Hometown, Birthday, Avatar
 						FROM contacts t1 join users t2
-						ON t1.UserTwo=t2.ID 
+						ON t1.UserTwo=t2.ID
 						WHERE UserOne=:uid
 						ORDER BY Name;";
 			$params = array(
@@ -102,7 +103,7 @@
 			);
 			$result = $GLOBALS['MySQL']->query($query,$params);
 
-			return $result->fetchAll(PDO::FETCH_ASSOC);	
+			return $result->fetchAll(PDO::FETCH_ASSOC);
 
 		}
 
@@ -119,11 +120,14 @@
 		}
 
 		function getRole() {
-			return $GLOBALS['MySQL']->query(
+
+			$a = $GLOBALS['MySQL']->query(
 				"SELECT Name FROM roles A LEFT JOIN user_role B ON A.ID = B.Role WHERE B.Usr = :userid",
 				array(
 					':userid' => $GLOBALS['user']->userid
-				))->fetch()['Name'];
+				))->fetch();
+            return $a['Name'];
+
 		}
 
 		static function getAllUsers() {

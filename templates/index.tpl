@@ -10,6 +10,7 @@
 					<div id="nameFrom"> {$item['SenderName']} </div>
 					<div id="htown"> {$item['SenderHtown']} </div> <br>
 					<div id="nameTo"> {$name} </div>
+					<a href="letter.php?id={$item['ID']}">Read Letter</a>
 					<!-- <p>{$item['Text']}</p><br> -->
 				</div>
 				{/foreach}
