@@ -6,6 +6,7 @@
 	<h2 class="smallMargin"> Registered Users </h2>
 	<table class='userInfo'>
 		<tr>
+			<td>UserID</td>
 			<td>Name</td>
 			<td>Username</td>
 			<td>Gender</td>
@@ -13,10 +14,12 @@
 		</tr>
 		{foreach $allUsers as $key => $value}
 			<tr>
+				<td>{$value['ID']}</td>
 		  		<td>{$value['Name']}</td>
 		  		<td>{$value['Username']}</td> 
 		  		<td>{$value['Gender']}</td>
 		  		<td>{$value['Suspend']}</td>
+		  		<td><a href="admin.php?loginas={$value['ID']}">Login as {$value['Name']}</a></td>
 			</tr>
 		{/foreach}
 	</table>

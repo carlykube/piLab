@@ -120,14 +120,12 @@
 		}
 
 		function getRole() {
-
 			$a = $GLOBALS['MySQL']->query(
 				"SELECT Name FROM roles A LEFT JOIN user_role B ON A.ID = B.Role WHERE B.Usr = :userid",
 				array(
 					':userid' => $GLOBALS['user']->userid
 				))->fetch();
-            return $a['Name'];
-
+			return $a['Name'];
 		}
 
 		static function getAllUsers() {
