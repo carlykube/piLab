@@ -2,7 +2,7 @@
 
 {if $logged}
 	<h2>Welcome, {$name}</h2>
-	<div id="lettersDiv" class="divCenter lightBackgroundBox holder">
+	<div id="lettersDiv" class="divCenter lightBackgroundBox">
 			<h2 class="smallMargin"> New Letters </h2>
 			{if count($unreadLetters) > 0}
 				{foreach $unreadLetters as $key=>$item}
