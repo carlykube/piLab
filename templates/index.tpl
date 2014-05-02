@@ -54,9 +54,9 @@
 		<div id="clearer"></div>	
 	</div>
 {else}
-	<div id = "redirect" class ="divCenter lightBackgroundBox Holder" align = center>You are not logged in.<br>
-	<a href = "login.php"> Login </a><br>
-	<a href = "register.php"> Register </a></div>
+	<div id = "redirect" class ="divCenter lightBackgroundBox Holder" align = center>{$notloggedin}<br>
+	<a href = "login.php">{$navbarlogin}</a><br>
+	<a href = "register.php">{$navbarregister}</a></div>
 {/if}
 
 {include file="footer.tpl"}
