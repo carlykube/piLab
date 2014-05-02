@@ -12,6 +12,7 @@
 
 	<link href="css/main.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,800|Handlee' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 </head>
@@ -21,5 +22,3 @@
 	<div class='container'>
 
 	<h1> CorreoDigi </h1>
-
-
