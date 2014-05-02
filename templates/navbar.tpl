@@ -38,12 +38,13 @@
         </svg>
         <span>{$navbarregister}</span>
       </a>
+
       {else}
-      <a href="" id="tab3" class="tab3">
+      <a href="contacts.php" class="tab3">
         <svg viewBox="0 0 100 25" class="shape-tab">
           <use xlink:href="#shape-tab"></use>
         </svg>
-        <span>Contacts</span>
+        <span>{$navbarcontacts}</span>
       </a>
       <a href="create.php" class="tab4">
         <svg viewBox="0 0 100 25" class="shape-tab">
