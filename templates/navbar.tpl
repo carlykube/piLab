@@ -40,7 +40,7 @@
       </a>
 
       {else}
-      <a href="contacts.php" id="tab3" class="tab3">
+      <a href="contacts.php" class="tab3">
         <svg viewBox="0 0 100 25" class="shape-tab">
           <use xlink:href="#shape-tab"></use>
         </svg>

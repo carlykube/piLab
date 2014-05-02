@@ -1,4 +1,4 @@
-{include file="header.tpl" title="Contacts"}
+{include file="header.tpl" title=Contacts}
 
 <h2>Address Book</h2>
 <div id="contactsDiv" class="divCenter lightBackgroundBox holder">
