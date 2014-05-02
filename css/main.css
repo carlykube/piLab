@@ -9,7 +9,8 @@ html {
 	background-image: url("../img/prettyMeadow.png");
 	background-repeat: no-repeat;
 	background-attachment:fixed;
-	background-size: 100%;
+	background-size: cover;
+	background-position:right top;
 	height:100%;
     font-family: 'Raleway', 'sans-serif';
     font-weight: 800;
@@ -66,6 +67,8 @@ footer {
 	border-top: 1px solid;
 	width: 100%;
 	text-align: center;
+	background-color:white;
+	opacity:.7;
 }
 
 .error {
@@ -79,6 +82,12 @@ footer {
 	padding:1em;
 }
 
+input {
+	border-radius:10px;
+	box-shadow: inset 0px 0px 5px #777777;
+	padding:5px;
+}
+
 /******************/
 /* GENERAL STYLES */
 /******************/
@@ -87,11 +96,13 @@ footer {
 	border-radius: 0.5em;
 	padding: 1em;
 	margin-top: 2em;
+	box-shadow:0 0 15px #222222;
 }
 
 .roundedBackgroundBox {
 	border-radius: 2em;
 	margin-top: 2em;
+	box-shadow:0 0 15px #222222;
 }
 
 .divCenter {
@@ -821,3 +832,20 @@ div.contactBox form{
     padding-right:1em;
 }
 
+/*********/
+/* Admin */
+/*********/
+
+.userInfo {
+	margin-top:15px;
+}
+
+.userInfo tr td {
+	padding: 3px 20px;
+	font-size:15px;
+}
+
+tr.tableHeaders td {
+	font-weight:bold;
+	font-size:20px;
+}

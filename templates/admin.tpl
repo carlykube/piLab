@@ -5,7 +5,7 @@
 <div id="AdminConsole" class="divCenter lightBackgroundBox holder">
 	<h2 class="smallMargin"> Registered Users </h2>
 	<table class='userInfo'>
-		<tr>
+		<tr class="tableHeaders">
 			<td>UserID</td>
 			<td>Name</td>
 			<td>Username</td>
