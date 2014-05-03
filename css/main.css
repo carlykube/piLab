@@ -336,7 +336,7 @@ nav {
 @media screen {
     .main-nav {
         font-size: 0;
-        position: relative
+        position: relative;
     }
 
     .main-nav a {
@@ -348,7 +348,7 @@ nav {
         font-weight: 800;
         font-style: normal;
         font-size: 1rem;
-        margin: 0 0 0 -50px
+        margin: 0 0 0 -50px;
     }
 
     /* Tab 1 */
@@ -371,31 +371,38 @@ nav {
 @media screen {
     /* Tab 2 */
     .main-nav a.tab2 {
-        z-index: 90
+        z-index: 99;
     }
 
     /* Tab 2 */
     .main-nav a.tab2 svg {
-        fill: #be4c39
+        fill: #be4c39;
+    }
+
+    .main-nav a.tab2:hover{
+        z-index:120;
+    }
+
+    .main-nav a.tab2:active{
+        z-index:101;
     }
 
     /* Tab 2 */
-    .main-nav a.tab2:hover svg, .main-nav a.tab2:active svg {
-        fill: #a43
+    .main-nav a.tab2:hover svg{
+        fill: #a43;
     }
 }
 
 @media screen {
-    /* Tab 2 */
-    .tab2 .main-nav a.tab2 {
-        z-index: 200
-    }
 
     /* Tab 3 */
     .main-nav a.tab3 {
-        z-index: 80
+        z-index: 98;
     }
 
+    .main-nav a.tab3:hover{
+        z-index:120;
+    }
     /* Tab 3 */
     .main-nav a.tab3 svg {
         fill: #9351a6
@@ -415,7 +422,11 @@ nav {
 
     /* Tab 4 */
     .main-nav a.tab4 {
-        z-index: 70
+        z-index: 97
+    }
+
+    .main-nav a.tab4:hover{
+        z-index:101;
     }
 
     /* Tab 4 */
@@ -426,6 +437,7 @@ nav {
     /* Tab 4 */
     .main-nav a.tab4:hover svg, .main-nav a.tab4:active svg {
         fill: #3d67a6
+
     }
 }
 
@@ -464,7 +476,11 @@ nav {
 
     /* Tab 5 */
     .main-nav a.tab5 {
-        z-index: 60
+        z-index: 96
+    }
+
+    .main-nav a.tab5:hover{
+        z-index: 101;
     }
 
     /* Tab 5 */
@@ -527,7 +543,7 @@ nav {
         z-index: 200
     }
 
-    .main-nav a .shape-tab {
+    .main-nav a.shape-tab {
         position: absolute;
         top: 0;
         left: 0;

@@ -11,6 +11,8 @@
         License URI: http://www.gnu.org/licenses/gpl-2.0.html
         Tags: orange, css
        -->
+
+
       <a href="index.php" id="tab1" class="tab1">
         <svg viewBox="0 0 100 25" class="shape-tab">
           <use xlink:href="#shape-tab"></use>
@@ -75,6 +77,18 @@
       {/if}
 
 
+{if !$logged}
+<script type="text/javascript" src="./js/navbar.js"></script>
+<script type="text/javascript">
+activatables('page', ['tab-1', 'tab-2', 'tab-3', 'tab-4']);
+</script>
+{else}
+<script type="text/javascript" src="./js/navbar.js"></script>
+<script type="text/javascript">
+activatables('page', ['tab-1', 'tab-2', 'tab-3', 'tab-4', 'tab-5']);
+</script>
+{/if}
+
 <svg class="hide">
     <defs>
       <path id="shape-tab" d="M100,25C79.568,25,84.815,0,59.692,0H11.149C5.027,0,0,4.634,0,10.385V25"></path>
@@ -83,6 +97,5 @@
   </svg>
 </div>
 
-<script type="text/javascript" src="./js/navbar.js"></script>
 
 </nav>
