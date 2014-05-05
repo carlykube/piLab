@@ -730,6 +730,7 @@ nav {
     background-color:rgb(232,81,81);
     border: solid 4px #000000;
     border-radius: 2em;
+    position: relative;
 }
 
 #contactsDiv h2 {
@@ -774,9 +775,12 @@ div.contactBox form{
 	font-weight:bold;
 	font-style:normal;
 	height:33px;
-	width:85%;
+	width:50%;
 	text-decoration:none;
 	text-align:center;
+    position:absolute;
+    bottom: 2px;
+    right: 25%;
 }
 .contactBox button:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #65cb2e), color-stop(1, #86d956) );
@@ -784,8 +788,8 @@ div.contactBox form{
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#65cb2e', endColorstr='#86d956');
 	background-color:#65cb2e;
 }.contactBox button:active {
-	position:relative;
-	top:1px;
+	position:absolute;
+	bottom: 1px;
 }
 /* This button was generated using CSSButtonGenerator.com */
 

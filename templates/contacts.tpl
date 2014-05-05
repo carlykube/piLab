@@ -20,7 +20,7 @@
 					{/if}
 					<div class="title">Hometown</div>
 					<div class="content">{$value['Hometown']}</div>				
-					<div class="divCenter">
+					<div>
 						<form id="form" action="create.php" method="GET">
 							<input type="hidden" name="letterTo" value={$value['ID']}>
 							<button type="submit">Send Letter</button>
