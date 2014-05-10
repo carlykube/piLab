@@ -2,8 +2,8 @@
 
 $translations = array(
 'notloggedin' => array(
-	"You are not logged in.",
-	"tu no loggie"
+	"You are not logged in",
+	“Usted no está conectado"
 	)
 );
 
