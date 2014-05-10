@@ -1,9 +1,10 @@
 <?php
 
 $translations = array(
+
 'notloggedin' => array(
 	"You are not logged in",
-	“Usted no está conectado"
+	"Usted no está conectado"
 	)
 );
 
