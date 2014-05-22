@@ -15,7 +15,7 @@ html {
 */
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Pontano Sans', 'sans-serif';
 	height: 100%;
 }
 
@@ -25,7 +25,6 @@ body {
 }
 
 h1, h2, h3 {
-	font-family: 'Lato', sans-serif;
 	margin-left: 15%;
 }
 
@@ -38,7 +37,6 @@ h2 {
 }
 
 form {
-	font: 'Raleway', sans-serif;
 }
 
 label{
@@ -322,7 +320,6 @@ nav {
         width: 200px;
         height: 50px;
         color: #444;
-        font-family: 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
         font-weight: 500;
         font-style: normal;
         font-size: 1rem;
