@@ -41,6 +41,10 @@
 			return $letter;
 		}
 
+		public function getId(){
+			return $this->id;
+		}
+
 		private function initializeLetterFromDbResult($queryResult) {
 			$letter = new Letter();
 			$resultArray = $queryResult->fetch();

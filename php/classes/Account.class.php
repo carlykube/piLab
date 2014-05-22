@@ -52,9 +52,34 @@
 			
 		}
 
+		function loginAsUser($userID) {
+			$usr = new User();
+			$acct = new Account();
+			
+			$usr->fillWithID($userID);
+			$acct->userid = $userID;
+			$acct->logged = true;
+
+			$_SESSION['acct'] = serialize($acct);
+			$_SESSION['user'] = serialize($usr);
+			header('Location: index.php');
+			die();
+		}
+
 		function register() {
 			$this->username=$_POST["username"];
+			$role = $_POST["regtype"];
 
+			$query = "SELECT Username FROM users WHERE Username = :username";
+			$params = array(':username' => $this->username);
+			$res = $GLOBALS['MySQL']->query($query,$params);
+
+			if($res->fetch()) {
+				errorMessage("That username is already in use!");
+				header('Location: register.php?registrationtype='.$role);
+				die();
+			}
+			
 			$salt= dechex(mt_rand(0, 2147483647)) . dechex(mt_rand(0, 2147483647));
 			$password = hash('sha256', $_POST['password'] . $salt);
 			for($round = 0; $round < 65536; $round++)

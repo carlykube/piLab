@@ -11,7 +11,12 @@
 	<!-- CSS Links -->
 
 	<link href="css/main.css" rel="stylesheet">
+<<<<<<< HEAD
 	<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+=======
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,800|Handlee' rel='stylesheet' type='text/css'>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+>>>>>>> 6999aa90b2caa6d7932a2aff33375305a2bf5821
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
 </head>

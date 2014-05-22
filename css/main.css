@@ -9,13 +9,19 @@ html {
 	background-image: url("../img/prettyMeadow.png");
 	background-repeat: no-repeat;
 	background-attachment:fixed;
-	background-size: 100%;
+	background-size: cover;
+	background-position:right top;
 	height:100%;
-}
-*/
+    font-family: 'Raleway', 'sans-serif';
+    font-weight: 800;
+    }
+
 
 body {
+<<<<<<< HEAD
 	font-family: 'Pontano Sans', 'sans-serif';
+=======
+>>>>>>> 6999aa90b2caa6d7932a2aff33375305a2bf5821
 	height: 100%;
 }
 
@@ -36,9 +42,25 @@ h2 {
 	font-size: 2em;
 }
 
-form {
+p {
+    font-family: 'Raleway', 'cursive';
+    font-size: 1.5em;
+    font-weight: 400;
 }
 
+form {
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 6999aa90b2caa6d7932a2aff33375305a2bf5821
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 label{
 	 display: block;
 	 float: left;
@@ -52,6 +74,8 @@ footer {
 	border-top: 1px solid;
 	width: 100%;
 	text-align: center;
+	background-color:white;
+	opacity:.7;
 }
 
 .error {
@@ -65,6 +89,12 @@ footer {
 	padding:1em;
 }
 
+input {
+	border-radius:10px;
+	box-shadow: inset 0px 0px 5px #777777;
+	padding:5px;
+}
+
 /******************/
 /* GENERAL STYLES */
 /******************/
@@ -73,11 +103,13 @@ footer {
 	border-radius: 0.5em;
 	padding: 1em;
 	margin-top: 2em;
+	box-shadow:0 0 15px #222222;
 }
 
 .roundedBackgroundBox {
 	border-radius: 2em;
 	margin-top: 2em;
+	box-shadow:0 0 15px #222222;
 }
 
 .divCenter {
@@ -311,7 +343,7 @@ nav {
 @media screen {
     .main-nav {
         font-size: 0;
-        position: relative
+        position: relative;
     }
 
     .main-nav a {
@@ -320,11 +352,14 @@ nav {
         width: 200px;
         height: 50px;
         color: #444;
+<<<<<<< HEAD
         font-weight: 500;
+=======
+        font-weight: 800;
+>>>>>>> 6999aa90b2caa6d7932a2aff33375305a2bf5821
         font-style: normal;
         font-size: 1rem;
-        text-transform: uppercase;
-        margin: 0 0 0 -50px
+        margin: 0 0 0 -50px;
     }
 
     /* Tab 1 */
@@ -347,31 +382,38 @@ nav {
 @media screen {
     /* Tab 2 */
     .main-nav a.tab2 {
-        z-index: 90
+        z-index: 99;
     }
 
     /* Tab 2 */
     .main-nav a.tab2 svg {
-        fill: #be4c39
+        fill: #be4c39;
+    }
+
+    .main-nav a.tab2:hover{
+        z-index:120;
+    }
+
+    .main-nav a.tab2:active{
+        z-index:101;
     }
 
     /* Tab 2 */
-    .main-nav a.tab2:hover svg, .main-nav a.tab2:active svg {
-        fill: #a43
+    .main-nav a.tab2:hover svg{
+        fill: #a43;
     }
 }
 
 @media screen {
-    /* Tab 2 */
-    .tab2 .main-nav a.tab2 {
-        z-index: 200
-    }
 
     /* Tab 3 */
     .main-nav a.tab3 {
-        z-index: 80
+        z-index: 98;
     }
 
+    .main-nav a.tab3:hover{
+        z-index:120;
+    }
     /* Tab 3 */
     .main-nav a.tab3 svg {
         fill: #9351a6
@@ -391,7 +433,11 @@ nav {
 
     /* Tab 4 */
     .main-nav a.tab4 {
-        z-index: 70
+        z-index: 97
+    }
+
+    .main-nav a.tab4:hover{
+        z-index:101;
     }
 
     /* Tab 4 */
@@ -402,6 +448,7 @@ nav {
     /* Tab 4 */
     .main-nav a.tab4:hover svg, .main-nav a.tab4:active svg {
         fill: #3d67a6
+
     }
 }
 
@@ -440,7 +487,11 @@ nav {
 
     /* Tab 5 */
     .main-nav a.tab5 {
-        z-index: 60
+        z-index: 96
+    }
+
+    .main-nav a.tab5:hover{
+        z-index: 101;
     }
 
     /* Tab 5 */
@@ -503,7 +554,7 @@ nav {
         z-index: 200
     }
 
-    .main-nav a .shape-tab {
+    .main-nav a.shape-tab {
         position: absolute;
         top: 0;
         left: 0;
@@ -633,6 +684,7 @@ nav {
 .smallMargin{
 	margin-left: 1%;
 	margin-top: 10px;
+    margin-bottom: 0em;
 }
 
 .holder{
@@ -643,13 +695,20 @@ nav {
 }
 
 .letter{
-    margin:4px 4px 4px 4px;
+    margin:4px 20px 4px 4px;
     padding: 10px;
     float:left;
     width:320px;
     height:158px;
     background-color:#FFFFFF;
     border: solid 2px #000000;
+}
+
+.letter img {
+    position:absolute;
+    width:4em;
+    height:2.5em;
+    margin-left: 14.5em;
 }
 
 .createLetter{
@@ -673,34 +732,42 @@ nav {
 /***************/
 
 .contactBox{
-    margin:6px 6px 6px 6px;
-    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 25px;
     float:left;
     width:20%;
-    height:250px;
+    height:290px;
     background-color:rgb(232,81,81);
     border: solid 4px #000000;
     border-radius: 2em;
+    position: relative;
+}
+
+#contactsDiv h2 {
+    float:left;
+    padding-bottom: 2px;
+}
+
+#contactsDiv form input {
+    margin-left: 2em;
 }
 
 div.contactBox div.name {
 	text-align: center;
 	font-size: x-large;
-	font-family: 'Lato', sans-serif;
 	margin: 10px;
 }
 
 div.contactBox div.title {
 	text-align: center;
 	font-size: large;
-	font-family: 'Lato', sans-serif;
 	margin-top: 10px;
 }
 
 div.contactBox div.content {
 	text-align: center;
 	font-size: medium;
-	font-family: 'Raleway', sans-serif;
 	margin-top: 5px;
 }
 
@@ -715,14 +782,16 @@ div.contactBox form{
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#86d956', endColorstr='#65cb2e');
 	border-radius: 0.7em;
 	border:2px solid #000000;
-	font-family: Raleway;
 	font-size:13px;
 	font-weight:bold;
 	font-style:normal;
 	height:33px;
-	width:85%;
+	width:50%;
 	text-decoration:none;
 	text-align:center;
+    position:absolute;
+    bottom: 2px;
+    right: 25%;
 }
 .contactBox button:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #65cb2e), color-stop(1, #86d956) );
@@ -730,8 +799,8 @@ div.contactBox form{
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#65cb2e', endColorstr='#86d956');
 	background-color:#65cb2e;
 }.contactBox button:active {
-	position:relative;
-	top:1px;
+	position:absolute;
+	bottom: 1px;
 }
 /* This button was generated using CSSButtonGenerator.com */
 
@@ -739,36 +808,75 @@ div.contactBox form{
 /**********************/
 /* Create Letter Page */
 /**********************/
-.createLetter p.date{
+
+.createLetter {
+    border: 10px solid;
+}
+
+.createLetter p {
+    font-family: 'Handlee', 'cursive';
+}
+
+.createLetter p.date {
 	float: right;
 }
 
-.createLetter div.submit{
+.createLetter div.submit {
 	text-align: center;
 }
 
-.letterForm input[type=submit] {
+.createLetter input[type=submit] {
 	border: none;
 	border-radius:0.3em;
 	height:2em;
     padding: 2px 8px;
     width:40%;
     background-color:rgb(53,160,203);
+    font-family: 'Handlee', 'cursive';
 }
 
-.letterForm input[type=submit]:hover {
+.createLetter input[type=submit]:hover {
     background-color:rgba(53,160,203,0.7);
 }
 
-#message{
+/* Letter text field */
+.createLetter textarea {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	width: 100%;
 	padding: 10px;
-	border: 2px solid #999;
+	border: 0px;
+    font-size: 1.5em;
+    line-height: 140%;
+    font-family: 'Handlee', 'cursive';
 }
 
-.createLetter{
-	border: 15px solid;
+/*********/
+/* ABOUT */
+/*********/
+
+#about img {
+    width:30%;
+    height:30%;
+    float:left;
+    padding-right:1em;
+}
+
+/*********/
+/* Admin */
+/*********/
+
+.userInfo {
+	margin-top:15px;
+}
+
+.userInfo tr td {
+	padding: 3px 20px;
+	font-size:15px;
+}
+
+tr.tableHeaders td {
+	font-weight:bold;
+	font-size:20px;
 }

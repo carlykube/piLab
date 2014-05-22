@@ -11,6 +11,8 @@
         License URI: http://www.gnu.org/licenses/gpl-2.0.html
         Tags: orange, css
        -->
+
+
       <a href="index.php" id="tab1" class="tab1">
         <svg viewBox="0 0 100 25" class="shape-tab">
           <use xlink:href="#shape-tab"></use>
@@ -38,12 +40,13 @@
         </svg>
         <span>{$navbarregister}</span>
       </a>
+
       {else}
-      <a href="" id="tab3" class="tab3">
+      <a href="contacts.php" class="tab3">
         <svg viewBox="0 0 100 25" class="shape-tab">
           <use xlink:href="#shape-tab"></use>
         </svg>
-        <span>Contacts</span>
+        <span>{$navbarcontacts}</span>
       </a>
       <a href="create.php" class="tab4">
         <svg viewBox="0 0 100 25" class="shape-tab">
@@ -63,9 +66,28 @@
         </svg>
         <span>Admin</span>
       </a>
+      {else}
+       <a href="account.php" id="rightTab" class="rightTab">
+        <svg viewBox="0 0 100 25" class="shape-tab-right">
+          <use xlink:href="#shape-tab-right"></use>
+        </svg>
+        <span>Account</span>
+      </a>
       {/if}
       {/if}
 
+
+{if !$logged}
+<script type="text/javascript" src="./js/navbar.js"></script>
+<script type="text/javascript">
+activatables('page', ['tab-1', 'tab-2', 'tab-3', 'tab-4']);
+</script>
+{else}
+<script type="text/javascript" src="./js/navbar.js"></script>
+<script type="text/javascript">
+activatables('page', ['tab-1', 'tab-2', 'tab-3', 'tab-4', 'tab-5']);
+</script>
+{/if}
 
 <svg class="hide">
     <defs>
@@ -75,6 +97,5 @@
   </svg>
 </div>
 
-<script type="text/javascript" src="./js/navbar.js"></script>
 
 </nav>
