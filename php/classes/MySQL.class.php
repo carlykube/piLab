@@ -1,10 +1,10 @@
 <?php
 class MySQL {
 
-	private $host = "198.199.94.192";
+	private $host = "localhost";
 
 	
-	private $user = "pilabusr";
+	private $user = "pilab";
 	private $password = "ewbSMU"; 
    
 	private $dbname = "pilab";
